@@ -11,7 +11,8 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
-    "storybook": "nuxt storybook"
+    "storybook": "nuxt storybook",
+    "storybook-build": "yarn nuxt storybook build"
   },
   "dependencies": {
     "@egjs/flicking-plugins": "^4.4.0",
