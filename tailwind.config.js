@@ -1,6 +1,12 @@
 module.exports = {
   darkMode: 'media', // or 'media' or 'class
   options: {
+    content: [
+      './pages/**/*.{html,js,vue}',
+      './components/**/*.{html,js,stories.js,vue}',
+      './composables/**/*.{html,js,vue}',
+      './layouts/**/*.{html,js,vue}',
+    ],
     safelist: [
       'bg-primary-200',
       'bg-info-200',
@@ -10,7 +16,8 @@ module.exports = {
       "fixed",
       "inset-0",
       "opacity-75",
-      "transition-opacity"
+      "transition-opacity",
+      "*"
     ],
   },
   theme: {

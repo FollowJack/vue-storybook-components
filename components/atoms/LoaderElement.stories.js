@@ -1,8 +1,17 @@
 export default {
   title: 'Atoms/LoaderElement',
+  argTypes: {
+    size: {
+      options: [
+        'sm', 'md', 'lg',
+      ],
+      control: { type: 'radio' },
+    },
+  },
 }
 
 const defaultArgs = {
+  size: 'sm'
 }
 
 const Template = (args) => ({

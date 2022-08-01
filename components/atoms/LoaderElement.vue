@@ -1,6 +1,13 @@
 <template>
   <svg
-    class="animate-spin h-12 w-12 text-white"
+    :class="[
+      'animate-spin text-white',
+      {
+        'h-8 w-8': size === 'sm',
+        'h-10 w-10': size === 'md',
+        'h-12 w-12': size === 'lg',
+      },
+    ]"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -20,3 +27,12 @@
     ></path>
   </svg>
 </template>
+<script setup>
+defineProps({
+  size: {
+    type: String,
+    default: 'sm',
+    validator: (value) => ['sm', 'md', 'lg'].includes(value),
+  },
+})
+</script>
