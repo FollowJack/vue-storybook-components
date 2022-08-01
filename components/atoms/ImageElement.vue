@@ -1,11 +1,5 @@
 <template>
-  <img
-    :src="src"
-    :loading="loading"
-    :width="width"
-    :height="height"
-    :alt="alt"
-  />
+  <img :src="src" :alt="alt" :loading="loading" />
 </template>
 
 <script setup>
@@ -14,21 +8,15 @@ defineProps({
     type: String,
     required: true,
   },
-  height: {
-    type: String,
-    default: '',
-  },
-  width: {
-    type: String,
-    default: '',
-  },
   alt: {
     type: String,
-    default: null,
+    default: '',
   },
   loading: {
     type: String,
-    default: null,
+    default: 'eager',
+    validator: (value) => ['eager', 'lazy'].includes(value),
+    // Further info: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading
   },
 })
 </script>

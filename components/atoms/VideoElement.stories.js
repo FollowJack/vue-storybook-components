@@ -4,6 +4,11 @@ export default {
 
 const defaultArgs = {
   src: "https://www.devparadise.io/videos/laptop_typing.mp4",
+  autoplay: true,
+  muted: true,
+  loop: true,
+  controls: false,
+  type: 'video/mp4',
 }
 
 const Template = (args) => ({

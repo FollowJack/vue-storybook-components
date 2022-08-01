@@ -1,13 +1,19 @@
 export default {
   title: 'Atoms/ImageElement',
+  argTypes: {
+    loading: {
+      options: [
+        'eager', 'lazy'
+      ],
+      control: { type: 'radio' },
+    },
+  }
 }
 
 const defaultArgs = {
   src: "https://via.placeholder.com/300",
-  height: "",
-  width: "",
   alt: "",
-  loading: ""
+  loading: "eager"
 }
 
 const Template = (args) => ({

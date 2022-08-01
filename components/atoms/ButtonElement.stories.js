@@ -36,8 +36,8 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  variant: '',
-  size: 'lg',
+  variant: 'primary',
+  size: 'sm',
   rounded: false,
 }
 
@@ -50,7 +50,6 @@ const Template = (args) => ({
     <div class="bg-blue-100">
       <div class="space-x-1">
         <ButtonElement v-bind="args" @click-button="onClick">{{args.default}}</ButtonElement>
-        <ButtonElement v-bind="args" rounded @click-button="onClick">{{args.default}}</ButtonElement>
       </div>
     </div>
     `,
