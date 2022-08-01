@@ -24,6 +24,7 @@ export default {
   // enable subfolders in automatic components detection: https://github.com/nuxt/components#migration-guide
   components: [
     '~/components/atoms',
+    '~/components/molecules',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

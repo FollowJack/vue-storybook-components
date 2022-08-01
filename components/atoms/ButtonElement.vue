@@ -1,19 +1,22 @@
 <template>
   <button
     :class="[
-      'px-6 py-3 transition duration-700 ease-in-out',
+      'transition duration-700 ease-in-out',
       {
-        'rounded-full ': rounded,
+        'px-6 py-3': size === 'sm',
+        'px-8 py-4': size === 'md',
+        'px-10 py-5': size === 'lg',
+        rounded: rounded,
         'text-white border border-primary bg-primary hover:text-black hover:border-gray-900 hover:bg-white':
-          primary,
+          variant === 'primary',
         'text-white border border-secondary bg-secondary hover:text-black hover:border-gray-900 hover:bg-white':
-          secondary,
+          variant === 'secondary',
         'text-white border bg-gray-900 hover:text-black hover:border-gray-900 hover:bg-white':
-          outline,
+          variant === 'outline',
         'text-black border-transparent hover:text-black hover:border hover:border-gray-900 hover:bg-white':
-          ghost,
+          variant === 'ghost',
         'text-white border border-red-500 bg-red-500 hover:text-black hover:border-gray-900 hover:bg-white':
-          danger,
+          variant === 'danger',
       },
     ]"
     @click="$emit('click-button')"
@@ -25,14 +28,22 @@
 <script setup>
 defineEmits(['click-button'])
 defineProps({
-  primary: Boolean,
-  secondary: Boolean,
-  outline: Boolean,
-  ghost: Boolean,
-  danger: Boolean,
+  variant: {
+    type: String,
+    default: '',
+    validator: (value) =>
+      ['', 'primary', 'secondary', 'outline', 'ghost', 'danger'].includes(
+        value
+      ),
+  },
   rounded: {
     type: Boolean,
     default: false,
+  },
+  size: {
+    type: String,
+    default: 'sm',
+    validator: (value) => ['sm', 'md', 'lg'].includes(value),
   },
 })
 </script>

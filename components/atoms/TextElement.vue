@@ -10,6 +10,7 @@
         'text-headline2': variant === 'headline2',
         'text-headline3': variant === 'headline3',
         'font-bold': weight === 'bold',
+        'text-white': color === 'white',
       },
     ]"
   >
@@ -39,6 +40,11 @@ defineProps({
         'headline2',
         'headline3',
       ].includes(value),
+  },
+  color: {
+    type: String,
+    default: '',
+    validator: (value) => ['primary', 'white'].includes(value),
   },
   weight: {
     type: String,
