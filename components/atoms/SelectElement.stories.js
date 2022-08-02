@@ -20,7 +20,8 @@ const defaultArgs = {
     value: 3,
     content: 'TailwindCSS',
   },],
-  selected: {},
+  selectedValue: {},
+  disabled: true,
 }
 
 const Template = (args) => ({
