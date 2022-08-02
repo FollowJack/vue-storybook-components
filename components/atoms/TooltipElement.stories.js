@@ -5,7 +5,7 @@ export default {
 }
 
 const actionsData = {
-  onClick: action('update:value'),
+  onClick: action('toggle'),
 }
 
 const defaultArgs = {}
@@ -17,9 +17,9 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100 space-x-1">
-      <TooltipElement v-bind="args" @update:value="onClick">
-        <template #tooltip-anchor>test-a</template>
-        <template #tooltip-content>test-c</template>
+      <TooltipElement v-bind="args" @toggle="onClick">
+        <template #tooltip-anchor>Click on me</template>
+        <template #tooltip-content>I am the tooltip content</template>
       </TooltipElement>
     </div>
     `,

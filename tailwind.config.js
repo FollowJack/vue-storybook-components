@@ -40,6 +40,7 @@ module.exports = {
       zIndex: {
         'backdrop': '1000',
         'modal': '1001',
+        'tooltip': '1002',
       },
       colors: {
         "cookie-100": "#EAE0D8",
