@@ -1,20 +1,39 @@
 <template>
-  <label class="">
-    <input class="" type="radio" :name="name" :checked="isChecked" />
-    <TextElement><slot /></TextElement>
+  <label :for="id" @click="handleClick">
+    <input
+      :id="id"
+      type="radio"
+      :name="name"
+      :checked="valuePicked === value"
+      :value="value"
+    />
+    <slot />
   </label>
 </template>
 
 <script setup>
-import TextElement from '../atoms/TextElement.vue'
-defineProps({
+// docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+const emit = defineEmits(['update:value'])
+const props = defineProps({
+  value: {
+    type: String,
+    required: true,
+  },
+  valuePicked: {
+    type: String,
+    default: null,
+  },
+  id: {
+    type: String,
+    required: true,
+  },
   name: {
     type: String,
     required: true,
   },
-  isChecked: {
-    type: Boolean,
-    default: false,
-  },
 })
+
+function handleClick() {
+  emit('update:value', props.value)
+}
 </script>

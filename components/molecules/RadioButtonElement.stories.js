@@ -5,11 +5,13 @@ export default {
 }
 
 const actionsData = {
-  onClick: action('click:remove'),
+  onClick: action('update:value'),
 }
 
 const defaultArgs = {
-  size: "small",
+  name: "",
+  valuePicked: '',
+  id: "",
 }
 
 const Template = (args) => ({
@@ -19,10 +21,10 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100 space-y-1 flex flex-col">
-      <RadioButtonElement v-bind="args" name="form-radio" @click:remove="onClick">
+      <RadioButtonElement v-bind="args" id="1" value="1" name="form-radio" @update:value="onClick">
         Vue.js
       </RadioButtonElement>
-      <RadioButtonElement v-bind="args" name="form-radio" @click:remove="onClick">
+      <RadioButtonElement v-bind="args" id="2" value="2" name="form-radio" @update:value="onClick">
         Nuxt.js
       </RadioButtonElement>
     </div>
