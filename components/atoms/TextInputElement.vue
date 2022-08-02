@@ -9,7 +9,6 @@
     :pattern="pattern"
     :placeholder="placeholder"
     :readonly="readonly"
-    :required="required"
     :class="['py-2 px-5 border border-gray-500 rounded-md']"
   />
 </template>
@@ -52,10 +51,6 @@ defineProps({
     default: null,
   },
   readonly: {
-    type: Boolean,
-    default: false,
-  },
-  required: {
     type: Boolean,
     default: false,
   },

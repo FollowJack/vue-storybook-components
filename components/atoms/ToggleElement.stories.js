@@ -2,6 +2,14 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Atoms/ToggleElement',
+  argTypes: {
+    size: {
+      options: [
+        'sm', 'md', 'lg',
+      ],
+      control: { type: 'radio' },
+    },
+  }
 }
 
 const actionsData = {
@@ -9,7 +17,12 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  isOn: true,
+  isInitialOn: false,
+  value: '',
+  id: '',
+  name: '',
+  disabled: false,
+  size: 'sm',
 }
 
 const Template = (args) => ({
@@ -19,7 +32,9 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100 space-x-1">
-      <ToggleElement v-bind="args" @update:value="onClick" />
+      <ToggleElement v-bind="args" @update:value="onClick">
+        <TextElement variant="span">Toggle me</TextElement>
+      </ToggleElement>
     </div>
     `,
 })
