@@ -28,6 +28,12 @@ export default {
       ],
       control: { type: 'radio' },
     },
+    type: {
+      options: [
+        'button', 'submit', 'reset',
+      ],
+      control: { type: 'radio' },
+    },
   },
 }
 
@@ -38,7 +44,13 @@ const actionsData = {
 const defaultArgs = {
   variant: 'primary',
   size: 'sm',
-  rounded: false,
+  rounded: true,
+  ariaLabel: '',
+  type: 'button',
+  id: '',
+  disabled: false,
+  name: '',
+  value: '',
 }
 
 const Template = (args) => ({

@@ -1,5 +1,6 @@
 <template>
   <button
+    :id="id"
     :class="[
       'transition duration-700 ease-in-out',
       {
@@ -17,8 +18,14 @@
           variant === 'ghost',
         'text-white border border-red-500 bg-red-500 hover:text-black hover:border-gray-900 hover:bg-white':
           variant === 'danger',
+        'hover:bg-gray-500': disabled,
       },
     ]"
+    :aria-label="ariaLabel"
+    :disabled="disabled"
+    :name="name"
+    :type="type"
+    :value="value"
     @click="$emit('click-button')"
   >
     <slot />
@@ -26,6 +33,7 @@
 </template>
 
 <script setup>
+// docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
 defineEmits(['click-button'])
 defineProps({
   variant: {
@@ -38,12 +46,37 @@ defineProps({
   },
   rounded: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   size: {
     type: String,
     default: 'sm',
     validator: (value) => ['sm', 'md', 'lg'].includes(value),
+  },
+  type: {
+    type: String,
+    default: 'button',
+    validator: (value) => ['button', 'reset', 'submit'].includes(value),
+  },
+  id: {
+    type: String,
+    default: '',
+  },
+  ariaLabel: {
+    type: String,
+    default: '',
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+  name: {
+    type: String,
+    default: '',
+  },
+  value: {
+    type: String,
+    default: '',
   },
 })
 </script>

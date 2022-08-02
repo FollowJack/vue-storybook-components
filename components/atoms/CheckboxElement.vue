@@ -1,10 +1,11 @@
 <template>
-  <div class="flex space-x-2 cursor-pointer">
+  <label class="flex space-x-2 cursor-pointer">
     <input
       :id="id"
       :checked="isChecked"
       :value="value"
       type="checkbox"
+      :name="name"
       :class="[
         'rounded cursor-pointer',
         {
@@ -16,19 +17,25 @@
       @input="handleInput"
     />
     <slot />
-  </div>
+  </label>
 </template>
 
 <script setup>
 // docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox
-defineProps({
+import { ref } from 'vue'
+const emit = defineEmits(['input:value'])
+const props = defineProps({
   id: {
     type: String,
     required: true,
   },
-  isChecked: {
+  isInitialChecked: {
     type: Boolean,
     required: true,
+  },
+  name: {
+    type: String,
+    default: 'true',
   },
   value: {
     type: String,
@@ -40,7 +47,8 @@ defineProps({
     validator: (value) => ['sm', 'md', 'lg'].includes(value),
   },
 })
-const emit = defineEmits(['input:value'])
+
+const isChecked = ref(props.isInitialChecked)
 
 function handleInput(event) {
   emit('input:value', event.target.value, event.target.checked)

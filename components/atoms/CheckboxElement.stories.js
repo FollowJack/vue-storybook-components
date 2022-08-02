@@ -17,9 +17,10 @@ const actionsData = {
 
 const defaultArgs = {
   id: "form-checkbox-element",
-  isChecked: true,
+  isInitialChecked: false,
   value: "Neo",
   size: "sm",
+  name: '',
 }
 
 const Template = (args) => ({
