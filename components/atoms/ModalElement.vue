@@ -1,30 +1,35 @@
 <template>
-  <div v-if="isVisible" class="fixed inset-0 flex justify-center items-center">
+  <div class="fixed inset-0 flex justify-center items-center">
     <div
       class="bg-black fixed inset-0 opacity-50 transition-opacity z-backdrop"
       @click="handleClose"
     />
-    <div :class="['w-auto h-auto z-modal', classModal]"><slot /></div>
+    <div :class="['z-modal', classModal]"><slot /></div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import { useDisableScroll } from '@/composables/useDisableScroll'
+const { setDisableScroll } = useDisableScroll()
+const emit = defineEmits(['close'])
 defineProps({
   classModal: {
     type: String,
     default: '',
   },
 })
-const isVisible = ref(true)
-const emit = defineEmits(['close'])
+
+onMounted(() => {
+  setDisableScroll(true)
+})
+
+onUnmounted(() => {
+  handleClose()
+})
 
 function handleClose() {
-  console.log('test')
   emit('close')
-  isVisible.value = false
+  setDisableScroll(false)
 }
-
-useDisableScroll(isVisible)
 </script>

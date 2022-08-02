@@ -9,8 +9,8 @@
       :class="[
         'rounded cursor-pointer',
         {
-          'h-4 w-4': size === 'sm',
-          'h-5 w-5': size === 'md',
+          'h-4 w-4 mt-1': size === 'sm',
+          'h-5 w-5 mt-0.5': size === 'md',
           'h-6 w-6': size === 'lg',
         },
       ]"

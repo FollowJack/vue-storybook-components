@@ -9,6 +9,7 @@ defineProps({
   as: {
     type: String,
     default: 'div',
+    // <div>, <article>, <section>, <header>, <footer>, <form>, and more.
   },
 })
 </script>
