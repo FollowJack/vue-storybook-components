@@ -1,11 +1,10 @@
 <template>
-  <div>
+  <div class="relative inline-block">
     <ButtonElement
-      id="dropdownDefault"
-      data-dropdown-toggle="dropdown"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      type="button"
-      @click.native="handleButtonClick(!isDropdownVisible)"
+      :id="id"
+      :variant="variant"
+      class="inline-flex items-center"
+      @click-button="handleToggle(!isDropdownVisible)"
     >
       Dropdown button
       <svg
@@ -26,60 +25,39 @@
     </ButtonElement>
     <div
       v-if="isDropdownVisible"
-      id="dropdown"
-      class="z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+      class="z-modal absolute right-0 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
     >
-      <ul
-        class="py-1 text-sm text-gray-700 dark:text-gray-200"
-        aria-labelledby="dropdownDefault"
-      >
-        <li>
-          <a
-            href="#"
-            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Dashboard</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Settings</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Earnings</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Sign out</a
-          >
-        </li>
-      </ul>
+      <slot name="content" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const isDropdownVisible = ref(false)
-defineProps({
-  isOn: {
+const emit = defineEmits(['toggle'])
+const props = defineProps({
+  isDefaultOpen: {
     type: Boolean,
-    required: true,
+    default: false,
+  },
+  variant: {
+    type: String,
+    default: '',
+    validator: (value) =>
+      ['', 'primary', 'secondary', 'outline', 'ghost', 'danger'].includes(
+        value
+      ),
+  },
+  id: {
+    type: String,
+    default: '',
   },
 })
 
-const emit = defineEmits(['click:remove'])
+const isDropdownVisible = ref(props.isDefaultOpen)
 
-function handleButtonClick(newIsVisible) {
+function handleToggle(newIsVisible) {
   isDropdownVisible.value = newIsVisible
-  emit('click:remove', newIsVisible)
+  emit('toggle', newIsVisible)
 }
 </script>

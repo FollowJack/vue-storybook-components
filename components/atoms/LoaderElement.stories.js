@@ -25,5 +25,5 @@ const Template = (args) => ({
     </div>
     `,
 })
-export const Placeholder = Template.bind({})
-Placeholder.args = { ...defaultArgs }
+export const Default = Template.bind({})
+Default.args = { ...defaultArgs }
