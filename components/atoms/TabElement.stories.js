@@ -1,15 +1,16 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/TabsElement',
+  title: 'Atoms/TabElement',
 }
 
 const actionsData = {
-  onClick: action('click:remove'),
+  onClick: action('click-button'),
 }
 
 const defaultArgs = {
-  size: "small",
+  id: 'tab-1',
+  disabled: false,
 }
 
 const Template = (args) => ({
@@ -18,10 +19,8 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
-      <TabsElement v-bind="args" @click:remove="onClick">
-        Vue.js
-      </TabsElement>
+    <div class="bg-blue-100">
+      <TabElement @update-selected="onClick">Tab 1</TabElement>
     </div>
     `,
 })
