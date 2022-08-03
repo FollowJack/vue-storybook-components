@@ -1,7 +1,18 @@
 <template>
-  <span class="py-1 px-2 bg-primary space-x-5 cursor-pointer rounded"
-    ><TextElement color="white" variant="copy-small"><slot /> </TextElement
-    ><ButtonElement :size="null" class="py-1" @click="handleRemove">
+  <span
+    :class="[
+      'inline-flex space-x-5 px-2 bg-primary rounded',
+      {
+        'py-0.5': size === 'md' || size === 'lg',
+        'cursor-pointer': isRemovable,
+      },
+    ]"
+    @click="handleRemove"
+  >
+    <TextElement :variant="textVariant" class="text-white"
+      ><slot />
+    </TextElement>
+    <ButtonElement v-if="isRemovable" size="" class="">
       <svg
         width="14"
         height="14"
@@ -20,21 +31,45 @@
             d="M1.00215385,13.0615384 L13.0593846,1 M1,1.00215385 L13.0615384,13.0593846"
             stroke="currentColor"
           ></path>
-        </g></svg></ButtonElement
-  ></span>
+        </g>
+      </svg>
+    </ButtonElement>
+  </span>
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
+const emit = defineEmits(['click:remove'])
 const props = defineProps({
-  isOn: {
+  id: {
+    type: String,
+    default: '',
+  },
+  isRemovable: {
     type: Boolean,
-    required: true,
+    default: true,
+  },
+  size: {
+    type: String,
+    default: 'sm',
+    validator: (value) => ['sm', 'md', 'lg'].includes(value),
   },
 })
 
-const emit = defineEmits(['click:remove'])
+const textVariant = computed(() => {
+  if (props.size === 'lg') {
+    return 'copy-large'
+  } else if (props.size === 'md') {
+    return 'copy-medium'
+  }
+  return 'copy-small'
+})
 
 function handleRemove() {
-  emit('click:remove', !props.isOn)
+  if (!props.isRemovable) {
+    return
+  }
+  emit('click:remove')
 }
 </script>

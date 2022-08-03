@@ -2,6 +2,14 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/TagElement',
+  argTypes: {
+    size: {
+      options: [
+        'sm', 'md', 'lg',
+      ],
+      control: { type: 'radio' },
+    },
+  }
 }
 
 const actionsData = {
@@ -9,7 +17,9 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  size: "small",
+  size: "sm",
+  isRemovable: true,
+  id: '',
 }
 
 const Template = (args) => ({
