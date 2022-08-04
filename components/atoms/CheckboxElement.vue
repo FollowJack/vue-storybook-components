@@ -1,17 +1,27 @@
 <template>
-  <label class="flex space-x-2 cursor-pointer">
+  <label
+    :class="[
+      'flex space-x-2',
+      {
+        'cursor-pointer': !disabled,
+        'cursor-not-allowed': disabled,
+      },
+    ]"
+  >
     <input
       :id="id"
       :checked="isChecked"
       :value="value"
       type="checkbox"
       :name="name"
+      :disabled="disabled"
       :class="[
-        'rounded cursor-pointer',
+        'w-4 h-4 text-blue-600 accent-primary rounded border border-stroke-gray hover:border-primary ',
         {
-          'h-4 w-4 mt-1': size === 'sm',
-          'h-5 w-5 mt-0.5': size === 'md',
-          'h-6 w-6': size === 'lg',
+          'h-4 w-4 mt-1': size === 'small',
+          'h-5 w-5 mt-0.5': size === 'medium',
+          'h-6 w-6': size === 'large',
+          'cursor-not-allowed': disabled,
         },
       ]"
       @input="handleInput"
@@ -37,14 +47,18 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
   value: {
     type: String,
     required: true,
   },
   size: {
     type: String,
-    default: 'sm',
-    validator: (value) => ['sm', 'md', 'lg'].includes(value),
+    default: 'small',
+    validator: (value) => ['small', 'medium', 'large'].includes(value),
   },
 })
 

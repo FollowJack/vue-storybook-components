@@ -5,7 +5,7 @@ export default {
   argTypes: {
     size: {
       options: [
-        'sm', 'md', 'lg',
+        'small', 'medium', 'large',
       ],
       control: { type: 'radio' },
     },
@@ -22,7 +22,7 @@ const defaultArgs = {
   id: '',
   name: '',
   disabled: false,
-  size: 'sm',
+  size: 'large',
 }
 
 const Template = (args) => ({

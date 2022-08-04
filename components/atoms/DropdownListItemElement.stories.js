@@ -1,16 +1,15 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/TabElement',
+  title: 'Atoms/DropdownListItemElement',
 }
 
 const actionsData = {
-  onClick: action('update:selected'),
+  onClick: action('click:item'),
 }
 
 const defaultArgs = {
-  id: 'tab-1',
-  selected: 'tab-2',
+  value: '',
   disabled: false,
 }
 
@@ -21,7 +20,9 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100">
-      <TabElement v-bind="args" @update:selected="onClick">Tab 1</TabElement>
+      <DropdownListItemElement v-bind="args" @click:item="onClick">
+        Content of the Element.
+      </DropdownListItemElement>
     </div>
     `,
 })

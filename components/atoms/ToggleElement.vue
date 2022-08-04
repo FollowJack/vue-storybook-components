@@ -1,5 +1,14 @@
 <template>
-  <div class="flex items-center" @click="handleToggle">
+  <div
+    :class="[
+      'flex items-center',
+      {
+        'cursor-pointer': !disabled,
+        'cursor-not-allowed': disabled,
+      },
+    ]"
+    @click="handleToggle"
+  >
     <input
       :id="id"
       class="hidden"
@@ -9,30 +18,42 @@
     />
     <div
       :class="[
-        ' flex items-center bg-gray-300 rounded-full duration-300 ease-in-out',
+        ' flex items-center rounded-full duration-300 ease-in-out',
         {
-          'p-0.5 w-6 h-4': size === 'sm',
-          'p-1 w-10 h-6': size === 'md',
-          'p-1 w-12 h-8': size === 'lg',
-          'bg-green-500': isOn && !disabled,
-          'bg-gray-500': disabled,
+          'p-0.5 w-6 h-4': size === 'small',
+          'p-1 w-10 h-6': size === 'medium',
+          'p-1 w-12 h-8': size === 'large',
+          'hover:shadow': !disabled,
+          'bg-font-light-gray': !isOn && !disabled,
+          'bg-primary': isOn && !disabled,
+          'bg-disabled': disabled,
         },
       ]"
     >
       <div
         :class="[
-          'bg-white rounded-full shadow-md transform duration-300 ease-in-out',
+          'bg-white rounded-full transform duration-300 ease-in-out',
           {
-            'w-3 h-3': size === 'sm',
-            'w-4 h-4': size === 'md',
-            'w-6 h-6': size === 'lg',
-            'translate-x-2': isOn && size === 'sm',
-            'translate-x-4': isOn && (size === 'md' || size === 'lg'),
+            'w-3 h-3': size === 'small',
+            'w-4 h-4': size === 'medium',
+            'w-6 h-6': size === 'large',
+            'translate-x-2': isOn && size === 'small',
+            'translate-x-4': isOn && (size === 'medium' || size === 'large'),
           },
         ]"
       ></div>
     </div>
-    <label v-if="slots.default" :for="id" class="ml-2">
+    <label
+      v-if="slots.default"
+      :for="id"
+      :class="[
+        'ml-2',
+        {
+          'cursor-pointer': !disabled,
+          'cursor-not-allowed': disabled,
+        },
+      ]"
+    >
       <slot />
     </label>
   </div>
@@ -65,8 +86,8 @@ const props = defineProps({
   },
   size: {
     type: String,
-    default: 'sm',
-    validator: (value) => ['sm', 'md', 'lg'].includes(value),
+    default: 'large',
+    validator: (value) => ['small', 'medium', 'large'].includes(value),
   },
 })
 const slots = useSlots()

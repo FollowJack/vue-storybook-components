@@ -3,9 +3,9 @@
     :class="[
       'animate-spin text-white',
       {
-        'h-8 w-8': size === 'sm',
-        'h-10 w-10': size === 'md',
-        'h-12 w-12': size === 'lg',
+        'h-8 w-8': size === 'small',
+        'h-10 w-10': size === 'medium',
+        'h-12 w-12': size === 'large',
       },
     ]"
     xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@
 defineProps({
   size: {
     type: String,
-    default: 'sm',
-    validator: (value) => ['sm', 'md', 'lg'].includes(value),
+    default: 'small',
+    validator: (value) => ['small', 'medium', 'large'].includes(value),
   },
 })
 </script>

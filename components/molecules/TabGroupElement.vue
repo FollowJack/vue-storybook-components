@@ -1,7 +1,5 @@
 <template>
-  <ul
-    class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-  >
+  <ul class="flex flex-wrap">
     <slot :selected="selected" :handle-select="handleSelect" />
   </ul>
 </template>
@@ -18,7 +16,11 @@ const props = defineProps({
 const selected = ref(props.initialSelected)
 
 function handleSelect(id) {
-  selected.value = id
-  emit('select:tab', id)
+  if (selected.value === id) {
+    selected.value = null
+  } else {
+    selected.value = id
+  }
+  emit('select:tab', id, selected.value)
 }
 </script>

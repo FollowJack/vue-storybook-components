@@ -5,7 +5,7 @@ export default {
   argTypes: {
     size: {
       options: [
-        'sm', 'md', 'lg',
+        'small', 'medium', 'large',
       ],
       control: { type: 'radio' },
     },
@@ -17,7 +17,7 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  size: "sm",
+  size: "small",
   isRemovable: true,
   id: '',
 }

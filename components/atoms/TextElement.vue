@@ -10,6 +10,14 @@
         'text-headline2': variant === 'headline2',
         'text-headline3': variant === 'headline3',
         'font-bold': weight === 'bold',
+        'text-font-black': color === 'black',
+        'text-font-white': color === 'white',
+        'text-font-gray': color === 'gray',
+        'text-font-light-gray': color === 'light-gray',
+        'text-font-disabled': color === 'disabled',
+        'text-font-warning': color === 'warning',
+        'text-font-error': color === 'error',
+        'text-font-success': color === 'success',
       },
     ]"
   >
@@ -44,6 +52,21 @@ defineProps({
     type: String,
     default: 'normal',
     validator: (value) => ['normal', 'bold'].includes(value),
+  },
+  color: {
+    type: String,
+    default: 'black',
+    validator: (value) =>
+      [
+        'black',
+        'white',
+        'gray',
+        'light-gray',
+        'disabled',
+        'warning',
+        'error',
+        'success',
+      ].includes(value),
   },
 })
 </script>

@@ -6,7 +6,7 @@
     <div
       v-if="isVisible"
       role="tooltip"
-      class="absolute z-tooltip p-1 text-white rounded shadow-sm transition-opacity duration-300 bg-gray-500"
+      class="absolute z-tooltip py-1.5 p-2 rounded shadow transition-opacity duration-300"
     >
       <slot name="tooltip-content" />
     </div>

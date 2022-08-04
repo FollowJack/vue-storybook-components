@@ -33,6 +33,7 @@ const defaultArgs = {
   weight: 'normal',
   minLength: null,
   maxLength: null,
+  disabled: false,
 }
 
 const Template = (args) => ({

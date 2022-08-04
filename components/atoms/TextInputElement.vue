@@ -1,16 +1,25 @@
 <template>
-  <input
-    :value="value"
-    :type="type"
-    :name="name"
-    :disabled="disabled"
-    :maxlength="maxlength"
-    :minlength="minlength"
-    :pattern="pattern"
-    :placeholder="placeholder"
-    :readonly="readonly"
-    :class="['py-2 px-5 border border-gray-500 rounded-md']"
-  />
+  <div class="relative">
+    <input
+      :value="value"
+      :type="type"
+      :name="name"
+      :disabled="disabled"
+      :maxlength="maxlength"
+      :minlength="minlength"
+      :pattern="pattern"
+      :placeholder="placeholder"
+      :readonly="readonly"
+      :class="[
+        'py-4 px-5  bg-field-form rounded  focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
+        {
+          'text-font-black cursor-pointer hover:outline hover:outline-field-stroke-hover':
+            !disabled,
+          'text-font-disabled cursor-not-allowed': disabled,
+        },
+      ]"
+    />
+  </div>
 </template>
 
 <script setup>

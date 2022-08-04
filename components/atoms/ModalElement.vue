@@ -4,7 +4,7 @@
       class="bg-black fixed inset-0 opacity-50 transition-opacity z-backdrop"
       @click="handleClose"
     />
-    <div :class="['z-modal', classModal]"><slot /></div>
+    <div :class="['z-modal rounded shadow', classModal]"><slot /></div>
   </div>
 </template>
 

@@ -14,10 +14,7 @@ export default {
         },
       }
     },
-    as: {
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'p', 'strong', 'i'],
-      control: { type: 'radio' },
-    },
+
     variant: {
       options: [
         'copy-large',
@@ -29,6 +26,19 @@ export default {
       ],
       control: { type: 'radio' },
     },
+    color: {
+      options: [
+        'black',
+        'white',
+        'gray',
+        'light-gray',
+        'disabled',
+        'warning',
+        'error',
+        'success',
+      ],
+      control: { type: 'radio' },
+    },
     weight: {
       options: [
         'normal',
@@ -36,13 +46,18 @@ export default {
       ],
       control: { type: 'radio' },
     },
+    as: {
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'p', 'strong', 'i'],
+      control: { type: 'radio' },
+    },
   },
 }
 
 const defaultArgs = {
-  as: "p",
+  color: 'black',
   variant: "copy-medium",
   weight: "normal",
+  as: "p",
 }
 
 const Template = (args) => ({

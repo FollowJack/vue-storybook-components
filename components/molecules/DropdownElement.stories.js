@@ -13,7 +13,8 @@ export default {
 }
 
 const actionsData = {
-  onClick: action('toggle'),
+  onClick: action('click:item'),
+  onToggle: action('toggle'),
 }
 
 const defaultArgs = {
@@ -28,20 +29,24 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100">
-      <DropdownElement v-bind="args" @toggle="onClick">
-        <template #content>
-          <ul
-            class="py-1 text-gray-200"
-          >
-            <li class="cursor-pointer block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Dashboard</li>
-            <li class="cursor-pointer block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Settings</li>
-            <li class="cursor-pointer block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Earnings</li>
-            <li class="cursor-pointer block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Sign out</li>
-          </ul>
+      <DropdownElement v-bind="args" @toggle="onToggle" @click:item="onClick">
+        <template #content="{ handleClickItem }">
+          <DropdownListItemElement
+              @click:item="handleClickItem"
+              value="1"
+              >Dashboard</DropdownListItemElement>
+          <DropdownListItemElement
+              @click:item="handleClickItem"
+              value="2"
+              >Settings</DropdownListItemElement>
+          <DropdownListItemElement
+              @click:item="handleClickItem"
+              value="3"
+              >Earnings</DropdownListItemElement>
+          <DropdownListItemElement
+              disabled
+              @click:item="handleClickItem"
+              >Sign out</DropdownListItemElement>
         </template>
       </DropdownElement>
     </div>

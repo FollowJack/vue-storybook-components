@@ -16,25 +16,33 @@
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
+          v-if="!isDropdownVisible"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
           d="M19 9l-7 7-7-7"
         ></path>
+        <path
+          v-else
+          d="M18 15L12 9L6 15"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     </ButtonElement>
     <div
       v-if="isDropdownVisible"
-      class="z-modal absolute right-0 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+      class="z-modal absolute right-0 min-w-44 py-1 bg-white rounded shadow"
     >
-      <slot name="content" />
+      <slot name="content" :handle-click-item="handleClickItem" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const emit = defineEmits(['toggle'])
+const emit = defineEmits(['toggle', 'click:item'])
 const props = defineProps({
   isDefaultOpen: {
     type: Boolean,
@@ -42,7 +50,7 @@ const props = defineProps({
   },
   variant: {
     type: String,
-    default: '',
+    default: 'primary',
     validator: (value) =>
       ['', 'primary', 'secondary', 'outline', 'ghost', 'danger'].includes(
         value
@@ -59,5 +67,10 @@ const isDropdownVisible = ref(props.isDefaultOpen)
 function handleToggle(newIsVisible) {
   isDropdownVisible.value = newIsVisible
   emit('toggle', newIsVisible)
+}
+
+function handleClickItem(value) {
+  isDropdownVisible.value = false
+  emit('click:item', value)
 }
 </script>

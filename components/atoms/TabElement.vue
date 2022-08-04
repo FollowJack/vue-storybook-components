@@ -2,11 +2,12 @@
   <div
     :id="id"
     :class="[
-      'inline-block p-4 text-primary bg-gray-100 rounded-t-lg',
+      'inline-block px-4 py-1.5 border-b-2  bg-white',
       {
-        'cursor-pointer': !disabled,
-        'cursor-not-allowed': disabled,
-        'bg-red-500': id === selected,
+        'hover:text-primary cursor-pointer': !disabled,
+        'cursor-not-allowed text-font-disabled': disabled,
+        'text-primary border-primary': isSelected && !disabled,
+        'border-disabled hover:border-primary': !isSelected && !disabled,
       },
     ]"
     @click="handleClick"
@@ -16,6 +17,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const emit = defineEmits(['update:selected'])
 const props = defineProps({
   id: {
@@ -32,10 +35,12 @@ const props = defineProps({
   },
 })
 
+const isSelected = computed(() => props.id === props.selected)
+
 function handleClick() {
   if (props.disabled) {
     return
   }
-  emit('update:selected', props.id)
+  emit('update:selected', props.id, isSelected.value)
 }
 </script>

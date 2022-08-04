@@ -1,11 +1,12 @@
 <template>
-  <label :for="id" @click="handleClick">
+  <label :for="id" class="inline-flex" @click="handleClick">
     <input
       :id="id"
       type="radio"
       :name="name"
       :checked="valuePicked === value"
       :value="value"
+      class="w-4 h-4 mt-1 mr-1"
     />
     <slot />
   </label>

@@ -6,8 +6,11 @@
     :disabled="disabled"
     :maxlength="maxLength"
     :class="[
-      'h-40 p-2 border rounded',
+      'h-40 py-4 px-5  bg-field-form rounded  focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
       {
+        'text-font-black cursor-pointer hover:outline hover:outline-field-stroke-hover':
+          !disabled,
+        'text-font-disabled cursor-not-allowed': disabled,
         'text-copy-large': variant === 'copy-large',
         'text-copy-medium': variant === 'copy-medium',
         'text-copy-small': variant === 'copy-small',

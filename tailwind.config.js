@@ -7,18 +7,6 @@ module.exports = {
       './composables/**/*.{html,js,vue}',
       './layouts/**/*.{html,js,vue}',
     ],
-    safelist: [
-      'bg-primary-200',
-      'bg-info-200',
-      'bg-secondary-200',
-      "bg-gray-500",
-      "pointer-events-none",
-      "fixed",
-      "inset-0",
-      "opacity-75",
-      "transition-opacity",
-      "*"
-    ],
   },
   theme: {
     fontFamily: {
@@ -43,35 +31,42 @@ module.exports = {
         'tooltip': '1002',
       },
       colors: {
-        "cookie-100": "#EAE0D8",
-        "cookie-400": "#D7D0CE",
-        primary: "#3764EA",
-        "primary-100": "#3764EA0D",
-        "primary-200": "rgba(55, 100, 234, 0.10)",
-        "primary-400": "rgba(55, 100, 234, 0.25)",
+        // main
+        primary: "#605DEC",
+        "primary-hover": "#3D3ACE",
+        "primary-active": "#23209F",
         secondary: "#E62D4A",
-        "secondary-200": "rgba(230, 45, 74, 0.1)",
-        title: "#FFFFFF",
-        description: "#969696", // "#909496",
-
-        info: "#5454D4",
-        "info-200": "#FEDC5A1A",
-        warning: "#FEDC5A",
-        "warning-200": "rgba(254, 220, 90, 0.1)",
+        'secondary-hover': "#F6F5FF",
+        "secondary-active": "#F6F5FF",
+        // font
+        'font-warning': '#FFB82E',
+        'font-error': '#F93232',
+        'font-error-hover': '#F93232',
+        'font-success': '#439F6E',
+        'font-black': '#212121',
+        'font-white': '#FFFFFF',
+        'font-gray': '#8A8894',
+        'font-light-gray': '#C9C8D3',
+        'font-disabled': '#C5C0DB',
+        // background
+        'white': '#FFFFFF',
+        'disabled': '#F4F3FE',
+        // stroke
+        'stroke-focused': '#F845FC',
+        'stroke-gray': '#BDBCDB',
+        // field
+        'field-form': '#F7F7FD',
+        'field-title': '#9D99AC',
+        'field-description': '#AAAAAA',
+        'field-stroke-hover': '#E8E6F8',
+        'field-stroke-focused': '#605DEC',
+        'field-text-disabled': '#A5A5A7',
+        'field-stroke-validation': '#FFEAC1',
+        'field-bg-validation': '#FFFBF4',
+        'field-stroke-loading': '#E8E6F8',
+        'field-bg-error': '#FFF5F5',
+        'field-stroke-error': '#FFD8D8',
       },
-      outlineWidth: {
-        6: '6px',
-      },
-      width: {
-        '112': '28rem',
-        '200': '50rem',
-      },
-      height: {
-        '112': '28rem',
-      },
-      spacing: {
-        '30': '7.5rem',
-      }
     },
   },
   variants: {

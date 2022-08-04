@@ -4,7 +4,7 @@ export default {
   argTypes: {
     size: {
       options: [
-        'sm', 'md', 'lg',
+        'small', 'medium', 'large',
       ],
       control: { type: 'radio' },
     },
@@ -19,8 +19,9 @@ const defaultArgs = {
   id: "form-checkbox-element",
   isInitialChecked: false,
   value: "Neo",
-  size: "sm",
+  size: "small",
   name: '',
+  disabled: false,
 }
 
 const Template = (args) => ({
