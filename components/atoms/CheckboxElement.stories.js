@@ -18,8 +18,8 @@ const actionsData = {
 const defaultArgs = {
   id: "form-checkbox-element",
   isInitialChecked: false,
-  value: "Neo",
-  size: "small",
+  value: "",
+  size: "large",
   name: '',
   disabled: false,
 }

@@ -39,9 +39,18 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  value: {
+    type: String,
+    default: '',
+  },
   isInitialChecked: {
     type: Boolean,
-    required: true,
+    default: false,
+  },
+  size: {
+    type: String,
+    default: 'large',
+    validator: (value) => ['small', 'medium', 'large'].includes(value),
   },
   name: {
     type: String,
@@ -50,15 +59,6 @@ const props = defineProps({
   disabled: {
     type: Boolean,
     default: false,
-  },
-  value: {
-    type: String,
-    required: true,
-  },
-  size: {
-    type: String,
-    default: 'small',
-    validator: (value) => ['small', 'medium', 'large'].includes(value),
   },
 })
 
