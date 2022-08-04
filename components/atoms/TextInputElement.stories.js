@@ -24,13 +24,13 @@ const defaultArgs = {
   value: '',
   type: 'text',
   name: 'input',
+  placeholder: 'Type me',
   disabled: false,
+  readonly: false,
   maxlength: null,
   minlength: null,
-  placeholder: 'Type me',
-  pattern: null,
-  readonly: false,
   required: false,
+  pattern: '',
 }
 
 const Template = (args) => ({
