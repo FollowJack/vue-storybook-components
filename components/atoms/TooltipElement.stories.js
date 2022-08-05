@@ -16,7 +16,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
+    <div class="bg-blue-100 pt-20">
       <TooltipElement v-bind="args" @toggle="onClick">
         <template #tooltip-anchor>Click on me</template>
         <template #tooltip-content>I am the tooltip content</template>

@@ -1,26 +1,24 @@
 <template>
-  <div>
-    <div class="cursor-pointer" @click="handleClick">
+  <span class="relative group">
+    <span @mouseover="handleHover">
       <slot name="tooltip-anchor" />
-    </div>
+    </span>
     <div
-      v-if="isVisible"
-      role="tooltip"
-      class="absolute z-tooltip py-1.5 p-2 rounded shadow transition-opacity duration-300"
+      class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex"
     >
-      <slot name="tooltip-content" />
+      <span
+        class="relative z-tooltip p-2 bg-white whitespace-no-wrap shadow rounded"
+        ><slot name="tooltip-content"
+      /></span>
+      <div class="z-tooltip-anchor w-3 h-3 -mt-2 bg-white rotate-45"></div>
     </div>
-  </div>
+  </span>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 const emit = defineEmits(['toggle'])
-const isVisible = ref(false)
 
-function handleClick() {
-  isVisible.value = !isVisible.value
-  emit('toggle', isVisible.value)
+function handleHover() {
+  emit('toggle')
 }
 </script>

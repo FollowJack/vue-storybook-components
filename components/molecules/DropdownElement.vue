@@ -31,6 +31,12 @@
         />
       </svg>
     </ButtonElement>
+    <BackdropElement
+      v-if="isDropdownVisible"
+      is-transparent
+      is-scroll-lock-enabled="false"
+      @click:backdrop="handleToggle(!isDropdownVisible)"
+    />
     <div
       v-if="isDropdownVisible"
       class="z-modal absolute right-0 min-w-44 py-1 bg-white rounded shadow"
@@ -42,6 +48,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import BackdropElement from '../atoms/BackdropElement.vue'
 const emit = defineEmits(['toggle', 'click:item'])
 const props = defineProps({
   isDefaultOpen: {

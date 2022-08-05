@@ -1,17 +1,13 @@
 <template>
   <div class="fixed inset-0 flex justify-center items-center">
-    <div
-      class="bg-black fixed inset-0 opacity-50 transition-opacity z-backdrop"
-      @click="handleClose"
-    />
+    <BackdropElement @click:backdrop="handleClose" />
     <div :class="['z-modal rounded shadow', classModal]"><slot /></div>
   </div>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-import { useDisableScroll } from '@/composables/useDisableScroll'
-const { setDisableScroll } = useDisableScroll()
+import { onUnmounted } from 'vue'
+
 const emit = defineEmits(['close'])
 defineProps({
   classModal: {
@@ -20,16 +16,11 @@ defineProps({
   },
 })
 
-onMounted(() => {
-  setDisableScroll(true)
-})
-
 onUnmounted(() => {
   handleClose()
 })
 
 function handleClose() {
   emit('close')
-  setDisableScroll(false)
 }
 </script>

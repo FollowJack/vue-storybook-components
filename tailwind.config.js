@@ -28,7 +28,8 @@ module.exports = {
       zIndex: {
         'backdrop': '1000',
         'modal': '1001',
-        'tooltip': '1002',
+        'tooltip': '1010',
+        'tooltip-anchor': '1011',
       },
       colors: {
         // main
