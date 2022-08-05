@@ -33,10 +33,10 @@ module.exports = {
       },
       colors: {
         // main
-        primary: "#605DEC",
+        'primary': "#605DEC",
         "primary-hover": "#3D3ACE",
         "primary-active": "#23209F",
-        secondary: "#E62D4A",
+        'secondary': "#F6F5FF",
         'secondary-hover': "#F6F5FF",
         "secondary-active": "#F6F5FF",
         // font
@@ -63,9 +63,10 @@ module.exports = {
         'field-stroke-focused': '#605DEC',
         'field-text-disabled': '#A5A5A7',
         'field-stroke-validation': '#FFEAC1',
-        'field-bg-validation': '#FFFBF4',
         'field-stroke-loading': '#E8E6F8',
+        'field-bg-validation': '#FFFBF4',
         'field-bg-error': '#FFF5F5',
+        'field-bg-success': '#C0ECD4',
         'field-stroke-error': '#FFD8D8',
       },
     },
