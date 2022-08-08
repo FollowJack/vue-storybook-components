@@ -5,9 +5,11 @@
     :target="target"
     :class="[
       {
-        'text-primary hover:border-b hover:border-primary focus:border-b focus:border-primary':
+        'text-font-gray ': variant === 'default' && !disabled,
+        'text-primary': variant === 'primary' && !disabled,
+        'border-b border-transparent hover:text-primary hover:border-primary focus:border-b focus:border-primary':
           !disabled,
-        'text-font-disabled cursor-not-allowed': disabled,
+        'text-font-disabled': disabled,
       },
     ]"
     @click="handleClick"
@@ -23,6 +25,11 @@ const props = defineProps({
   href: {
     type: String,
     required: true,
+  },
+  variant: {
+    type: String,
+    default: 'default',
+    validator: (value) => ['default', 'primary'].includes(value),
   },
   id: {
     type: String,

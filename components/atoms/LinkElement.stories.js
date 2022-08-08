@@ -3,6 +3,12 @@ import { action } from '@storybook/addon-actions'
 export default {
   title: 'Atoms/LinkElement',
   argTypes: {
+    variant: {
+      options: [
+        'default', 'primary'
+      ],
+      control: { type: 'radio' },
+    },
     target: {
       options: [
         '_self', '_blank', '_parent', '_top'
@@ -18,6 +24,7 @@ const actionsData = {
 
 const defaultArgs = {
   href: '#',
+  variant: 'default',
   id: '',
   target: '_self',
   disabled: false,

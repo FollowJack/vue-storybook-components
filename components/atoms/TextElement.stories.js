@@ -28,6 +28,7 @@ export default {
     },
     color: {
       options: [
+        'primary',
         'black',
         'white',
         'gray',

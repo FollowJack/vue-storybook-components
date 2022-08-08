@@ -10,6 +10,7 @@
         'text-headline2': variant === 'headline2',
         'text-headline3': variant === 'headline3',
         'font-bold': weight === 'bold',
+        'text-primary': color === 'primary',
         'text-font-black': color === 'black',
         'text-font-white': color === 'white',
         'text-font-gray': color === 'gray',
@@ -58,6 +59,7 @@ defineProps({
     default: 'black',
     validator: (value) =>
       [
+        'primary',
         'black',
         'white',
         'gray',
