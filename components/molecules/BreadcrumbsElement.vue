@@ -30,7 +30,7 @@
           v-else
           :href="breadcrumb.link"
           class="inline-flex items-center"
-          variant="default"
+          variant="gray"
         >
           <!-- HOME Icon -->
           <svg

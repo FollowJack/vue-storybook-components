@@ -5,7 +5,7 @@ export default {
   argTypes: {
     variant: {
       options: [
-        'default', 'primary'
+        'gray', 'primary'
       ],
       control: { type: 'radio' },
     },
@@ -24,7 +24,7 @@ const actionsData = {
 
 const defaultArgs = {
   href: '#',
-  variant: 'default',
+  variant: 'primary',
   id: '',
   target: '_self',
   disabled: false,

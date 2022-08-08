@@ -28,8 +28,8 @@ const props = defineProps({
   },
   variant: {
     type: String,
-    default: 'default',
-    validator: (value) => ['default', 'primary'].includes(value),
+    default: 'primary',
+    validator: (value) => ['gray', 'primary'].includes(value),
   },
   id: {
     type: String,
