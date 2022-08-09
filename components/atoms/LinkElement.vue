@@ -5,9 +5,11 @@
     :target="target"
     :class="[
       {
-        'text-font-gray ': variant === 'gray' && !disabled,
-        'text-primary': variant === 'primary' && !disabled,
-        'border-b border-transparent hover:text-primary hover:border-primary focus:border-b focus:text-primary focus:border-primary':
+        'text-font-gray hover:text-primary focus:text-primary':
+          variant === 'gray' && !disabled,
+        'text-primary hover:text-primary focus:text-primary':
+          variant === 'primary' && !disabled,
+        'border-b border-transparent  hover:border-primary focus:border-b focus:border-primary':
           !disabled && border,
         'text-font-disabled': disabled,
       },
