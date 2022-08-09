@@ -1,13 +1,10 @@
 <template>
   <div class="fixed inset-0">
-    <BackdropElement
-      is-scroll-lock-enabled="true"
-      @click:backdrop="handleClose"
-    />
-    <div class="z-modal relative h-full">
+    <BackdropElement is-scroll-lock-enabled @click:backdrop="handleClose" />
+    <div class="z-modal relative flex flex-col min-h-full bg-white">
       <!-- CLOSE ICON -->
       <div
-        class="absolute top-4 right-4 flex flex-col text-font-light-gray cursor-pointer"
+        class="flex justify-end pt-4 pr-4 text-font-light-gray cursor-pointer"
         @click="handleClose"
       >
         <svg
