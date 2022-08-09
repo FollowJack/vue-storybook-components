@@ -19,7 +19,7 @@ export default {
 }
 
 const actionsData = {
-  onClick: action('click-button'),
+  onClick: action('click:button'),
 }
 
 const defaultArgs = {
@@ -28,6 +28,7 @@ const defaultArgs = {
   id: '',
   target: '_self',
   disabled: false,
+  border: true,
 }
 
 const Template = (args) => ({

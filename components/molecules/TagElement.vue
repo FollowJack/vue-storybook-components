@@ -15,7 +15,7 @@
       v-if="isRemovable"
       size=""
       class=""
-      @click-button="handleRemove"
+      @click:button="handleRemove"
     >
       <svg
         width="14"

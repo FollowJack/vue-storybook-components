@@ -4,7 +4,7 @@
       :id="id"
       :variant="variant"
       class="inline-flex items-center"
-      @click-button="handleToggle(!isDropdownVisible)"
+      @click:button="handleToggle(!isDropdownVisible)"
     >
       Dropdown button
       <svg

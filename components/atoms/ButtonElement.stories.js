@@ -38,7 +38,7 @@ export default {
 }
 
 const actionsData = {
-  onClick: action('click-button'),
+  onClick: action('click:button'),
 }
 
 const defaultArgs = {
@@ -61,7 +61,7 @@ const Template = (args) => ({
     `
     <div class="bg-blue-100">
       <div class="space-x-1">
-        <ButtonElement v-bind="args" @click-button="onClick">{{args.default}}</ButtonElement>
+        <ButtonElement v-bind="args" @click:button="onClick">{{args.default}}</ButtonElement>
       </div>
     </div>
     `,

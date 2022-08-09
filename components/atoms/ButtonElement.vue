@@ -30,7 +30,7 @@
     :name="name"
     :type="type"
     :value="value"
-    @click="$emit('click-button')"
+    @click="$emit('click:button')"
   >
     <slot />
   </button>
@@ -38,7 +38,7 @@
 
 <script setup>
 // docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
-defineEmits(['click-button'])
+defineEmits(['click:button'])
 defineProps({
   variant: {
     type: String,
