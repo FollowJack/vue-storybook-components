@@ -1,5 +1,6 @@
 <template>
-  <header
+  <ContainerElement
+    as="header"
     class="flex items-center justify-between px-4 py-2 lg:px-10 lg:py-5 border border-stroke-gray bg-white"
   >
     <!-- LOGO -->
@@ -64,12 +65,12 @@
         </nav>
       </SidebarElement>
     </div>
-  </header>
+  </ContainerElement>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import SidebarElement from '../atoms/SidebarElement.vue'
+import ContainerElement from '../atoms/ContainerElement.vue'
 const emit = defineEmits(['select:nav'])
 
 const isSidebarVisible = ref(true)
