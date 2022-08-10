@@ -16,7 +16,7 @@
       :name="name"
       :disabled="disabled"
       :class="[
-        'w-4 h-4 text-blue-600 accent-primary rounded border border-stroke-gray hover:border-primary ',
+        'text-blue-600 accent-primary rounded border border-stroke-gray hover:border-primary ',
         {
           'h-4 w-4 mt-1': size === 'small',
           'h-5 w-5 mt-0.5': size === 'medium',

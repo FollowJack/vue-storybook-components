@@ -1,7 +1,7 @@
 export default {
   title: 'Organisms/HeroElement',
   argTypes: {
-    "left-column": {
+    "left": {
       description: "The left slot",
       control: {
         type: 'text',
@@ -14,7 +14,7 @@ export default {
         },
       }
     },
-    "right-column": {
+    "right": {
       description: "The right slot",
       control: {
         type: 'text',
@@ -57,9 +57,9 @@ const Template = (args) => ({
     `
     <div class="bg-blue-100 h-screen">
       <HeroElement v-bind="args" class="h-screen bg-red-100">
-        <template #left-column>{{args['left-column']}}</template>
-        <template #right-column>{{args['right-column']}}</template>
-        <template #bottom>{{args['bottom']}}</template>
+        <template #left>{{args.left}}</template>
+        <template #right>{{args.right}}</template>
+        <template #bottom>{{args.bottom}}</template>
       </HeroElement>
     </div>
     `,

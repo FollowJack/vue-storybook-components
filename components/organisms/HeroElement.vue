@@ -1,19 +1,18 @@
 <template>
-  <div>
-    <ContainerElement class="flex flex-col h-full">
-      <div class="flex flex-1">
-        <div class="w-1/2 flex items-center">
-          <slot name="left-column" />
-        </div>
-        <div v-if="!!$slots['right-column']" class="w-1/2 flex items-center">
-          <slot name="right-column" />
-        </div>
+  <ContainerElement class="flex flex-col">
+    <div class="flex flex-1">
+      <!-- Only left side displayed on mobile -->
+      <div class="w-full lg:w-2/5 flex flex-col justify-center">
+        <slot name="left" />
       </div>
-      <div v-if="!!$slots['bottom']">
-        <slot name="bottom" />
+      <div v-if="!!$slots.right" class="hidden lg:flex w-3/5 items-center">
+        <slot name="right" />
       </div>
-    </ContainerElement>
-  </div>
+    </div>
+    <div v-if="!!$slots['bottom']">
+      <slot name="bottom" />
+    </div>
+  </ContainerElement>
 </template>
 
 <script setup></script>

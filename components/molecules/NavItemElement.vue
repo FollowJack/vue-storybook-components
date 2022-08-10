@@ -3,14 +3,14 @@
     :href="link"
     :border="false"
     :class="[
-      'py-3 px-4 bg-white hover:bg-secondary-hover focus:bg-secondary-hover rounded cursor-pointer',
+      'py-3 px-4 hover:bg-secondary-hover focus:bg-secondary-hover rounded cursor-pointer',
       {
         'bg-secondary-hover': isActive,
       },
     ]"
     @click:link="handleClick"
   >
-    <TextElement><slot /> </TextElement>
+    <slot />
   </LinkElement>
 </template>
 

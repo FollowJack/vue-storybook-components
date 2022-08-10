@@ -5,9 +5,9 @@
       // 'transition duration-700 ease-in-out',
       {
         // size
-        'px-8 py-5': size === 'large',
-        'px-8 py-4': size === 'medium',
-        'px-6 py-3': size === 'small',
+        'px-6 py-4': size === 'large',
+        'px-6 py-2': size === 'medium',
+        'px-6 py-1': size === 'small',
         // font color
         'text-font-white': variant === 'primary' && !disabled,
         'text-primary': variant === 'secondary' && !disabled,

@@ -15,7 +15,7 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100 h-screen">
-      <HeaderElement v-bind="args">
+      <HeaderElement v-bind="args" class="bg-white border border-stroke-gray">
         <template #navigation="{ handleSelect }" v-bind="args">
           <NavItemElement @click:nav="handleSelect"link="#">Projects</NavItemElement>
           <NavItemElement @click:nav="handleSelect"link="#">Get in contact</NavItemElement>

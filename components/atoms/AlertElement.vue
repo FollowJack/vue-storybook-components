@@ -2,7 +2,7 @@
   <div
     :id="id"
     :class="[
-      'p-4 space-x-2.5 flex border  rounded',
+      'p-4 space-x-2 flex border rounded',
       {
         'bg-disabled border-primary': variant === 'info',
         'bg-field-bg-error border-font-error': variant === 'error',

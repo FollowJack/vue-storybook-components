@@ -53,10 +53,6 @@
 
 <script setup>
 // docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
-import { useSlots } from 'vue'
-import TextElement from '../atoms/TextElement.vue'
-
-const slots = useSlots()
 const props = defineProps({
   breadcrumbs: {
     type: Array,

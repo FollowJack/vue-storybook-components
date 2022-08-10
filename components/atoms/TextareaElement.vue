@@ -6,7 +6,7 @@
     :disabled="disabled"
     :maxlength="maxLength"
     :class="[
-      'h-40 py-4 px-5  bg-field-form rounded  focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
+      'h-40 py-4 px-5 bg-field-form rounded focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
       {
         'text-font-black cursor-pointer hover:outline hover:outline-field-stroke-hover':
           !disabled,

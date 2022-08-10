@@ -38,7 +38,7 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100">
-      <LinkElement v-bind="args" @click:link="onClick">
+      <LinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
       Link to paradise...
       </LinkElement>
     </div>

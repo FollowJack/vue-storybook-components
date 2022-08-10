@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/SidebarElement',
+  title: 'Molecules/SidebarElement',
   argTypes: {
     default: {
       description: "The default Vue slot",

@@ -48,7 +48,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import BackdropElement from '../atoms/BackdropElement.vue'
 const emit = defineEmits(['toggle', 'click:item'])
 const props = defineProps({
   isDefaultOpen: {

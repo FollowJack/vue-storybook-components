@@ -1,8 +1,13 @@
 <template>
-  <div class="bg-white border border-stroke-gray">
+  <div>
     <ContainerElement
       as="header"
-      class="flex items-center justify-between px-4 py-2 lg:px-10 lg:py-5"
+      :class="[
+        'flex items-center justify-between px-4 xl:px-0 py-2 lg:py-5',
+        {
+          'fixed top-0 bg-[#030b16]': isStatic,
+        },
+      ]"
     >
       <!-- LOGO -->
       <slot name="logo">
@@ -14,16 +19,8 @@
 
       <!-- DESKTOP NAVIGATION -->
       <div class="hidden lg:block">
-        <slot
-          name="navigation"
-          :selected="selected"
-          :handle-select="handleSelect"
-        />
-        <slot
-          name="cta"
-          :selected="selected"
-          :handle-cta-click="() => handleMenuClick(false)"
-        />
+        <slot name="navigation" :handle-select="handleSelect" />
+        <slot name="cta" :handle-cta-click="() => handleMenuClick(false)" />
       </div>
       <!-- MOBILE MENU ICON -->
       <div class="lg:hidden">
@@ -53,16 +50,11 @@
         >
           <nav class="flex flex-col flex-1 space-y-2 px-4 pt-12 pb-6 bg-white">
             <div class="flex flex-col flex-1">
-              <slot
-                name="navigation"
-                :selected="selected"
-                :handle-select="handleSelect"
-              />
+              <slot name="navigation" :handle-select="handleSelect" />
             </div>
             <div class="flex items-end">
               <slot
                 name="cta"
-                :selected="selected"
                 :handle-cta-click="() => handleMenuClick(false)"
               />
             </div>
@@ -75,10 +67,15 @@
 
 <script setup>
 import { ref } from 'vue'
-import ContainerElement from '../atoms/ContainerElement.vue'
 const emit = defineEmits(['select:nav'])
+defineProps({
+  isStatic: {
+    type: Boolean,
+    default: false,
+  },
+})
 
-const isSidebarVisible = ref(true)
+const isSidebarVisible = ref(false)
 
 function handleSelect() {
   isSidebarVisible.value = false
