@@ -2,7 +2,7 @@
   <div
     :id="id"
     :class="[
-      'inline-block px-4 py-1.5 border-b-2  bg-white',
+      'inline-block px-4 py-2 border-b-2  bg-white',
       {
         'hover:text-primary cursor-pointer': !disabled,
         'cursor-not-allowed text-font-disabled': disabled,

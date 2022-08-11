@@ -1,7 +1,7 @@
 <template>
   <div class="fixed inset-0 flex justify-center items-center">
-    <BackdropElement @click:backdrop="handleClose" />
-    <div :class="['z-modal rounded shadow', classModal]"><slot /></div>
+    <BackdropElement is-scroll-lock-enabled @click:backdrop="handleClose" />
+    <div :class="['z-modal rounded', classModal]"><slot /></div>
   </div>
 </template>
 

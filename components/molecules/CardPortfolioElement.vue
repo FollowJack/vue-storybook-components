@@ -1,19 +1,20 @@
 <template>
   <div
-    class="h-full flex flex-col bg-secondary p-5 rounded-xl transition duration-700 ease-in-out hover:scale-105 cursor-pointer"
+    class="h-full flex flex-col bg-secondary p-4 rounded-xl transition duration-700 ease-in-out hover:scale-105 cursor-pointer"
     @click="handleClick"
   >
     <ImageElement
-      class="w-full mb-5 rounded-xl h-44 object-cover"
+      class="w-full mb-2 lg:mb-4 rounded-xl h-40 object-cover"
       :src="urlImage"
       :alt="alt"
       width="100%"
+      loading="lazy"
     />
     <div>
-      <TextElement as="p" variant="copy-small" class="mb-1">
+      <TextElement as="p" variant="copy-small" color="gray">
         <slot name="title"
       /></TextElement>
-      <TextElement as="h3" weight="bold" variant="copy-medium"
+      <TextElement as="h3" weight="bold" variant="copy-large"
         ><slot name="content"
       /></TextElement>
     </div>

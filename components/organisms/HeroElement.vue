@@ -5,7 +5,7 @@
       <div class="w-full lg:w-2/5 flex flex-col justify-center">
         <slot name="left" />
       </div>
-      <div v-if="!!$slots.right" class="hidden lg:flex w-3/5 items-center">
+      <div v-if="!!$slots.right" class="hidden lg:flex w-3/5 justify-center">
         <slot name="right" />
       </div>
     </div>

@@ -3,7 +3,7 @@
     <select
       :id="id"
       :class="[
-        'py-4 pl-5 pr-11 w-full appearance-none bg-field-form rounded  focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
+        'py-4 pl-4 pr-11 w-full appearance-none bg-field-form rounded  focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
         {
           'text-font-black cursor-pointer hover:outline hover:outline-field-stroke-hover':
             !disabled,

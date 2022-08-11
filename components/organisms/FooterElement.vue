@@ -1,11 +1,11 @@
 <template>
   <footer>
     <ContainerElement class="flex flex-col h-full">
-      <div class="flex flex-1">
-        <div class="w-1/2 flex items-center">
+      <div class="flex flex-1 flex-col lg:flex-row">
+        <div class="lg:w-1/2 flex">
           <slot name="left" />
         </div>
-        <div v-if="!!$slots.right" class="w-1/2 flex items-center">
+        <div v-if="!!$slots.right" class="lg:w-1/2 flex">
           <slot name="right" />
         </div>
       </div>

@@ -1,13 +1,19 @@
 <template>
-  <div class="flex space-x-2">
+  <div class="flex space-x-10">
     <LinkElement
-      variant="gray"
+      variant="white"
       :border="false"
       href="https://github.com/FollowJack"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
-        ><svg fill="currentColor" height="22" width="22" viewBox="0 0 512 512">
+        ><svg
+          class="h-10 w-10"
+          fill="currentColor"
+          height="22"
+          width="22"
+          viewBox="0 0 512 512"
+        >
           <path
             d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9c1.4,0.3,2.6,0.4,3.8,0.4c8.3,0,11.5-6.1,11.5-11.4
 	c0-5.5-0.2-19.9-0.3-39.1c-8.4,1.9-15.9,2.7-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5c-10.2-26.5-24.9-33.6-24.9-33.6
@@ -20,13 +26,19 @@
           ></path></svg></i
     ></LinkElement>
     <LinkElement
-      variant="gray"
+      variant="white"
       :border="false"
       href="https://www.linkedin.com/in/dhorvatic/"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
-        ><svg fill="currentColor" height="22" width="22" viewBox="0 0 512 512">
+        ><svg
+          class="h-10 w-10"
+          fill="currentColor"
+          height="22"
+          width="22"
+          viewBox="0 0 512 512"
+        >
           <g>
             <path
               d="M417.2,64H96.8C79.3,64,64,76.6,64,93.9v321.1c0,17.4,15.3,32.9,32.8,32.9h320.3c17.6,0,30.8-15.6,30.8-32.9V93.9
@@ -46,13 +58,19 @@
           </g></svg></i
     ></LinkElement>
     <LinkElement
-      variant="gray"
+      variant="white"
       :border="false"
       href="tel:+49 176-99-11-15-75"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
-        ><svg fill="currentColor" height="22" width="22" viewBox="0 0 512 512">
+        ><svg
+          class="h-10 w-10"
+          fill="currentColor"
+          height="22"
+          width="22"
+          viewBox="0 0 512 512"
+        >
           <path
             d="M426.666,330.667c-26.666,0-52.271-4.271-75.729-11.729c-7.469-2.136-16-1.073-21.332,5.333l-46.939,46.928
 	c-60.802-30.928-109.864-80-140.802-140.803l46.939-46.927c5.332-5.333,7.462-13.864,5.332-21.333
@@ -61,13 +79,19 @@
           ></path></svg></i
     ></LinkElement>
     <LinkElement
-      variant="gray"
+      variant="white"
       :border="false"
       href="mailto:hi@digitaldeni.de"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
-        ><svg fill="currentColor" height="22" width="22" viewBox="0 0 512 512">
+        ><svg
+          class="h-10 w-10"
+          fill="currentColor"
+          height="22"
+          width="22"
+          viewBox="0 0 512 512"
+        >
           <g>
             <polygon
               points="448,384 448,141.8 316.9,241.6 385,319 383,321 304.1,251.4 256,288 207.9,251.4 129,321 127,319 195,241.6

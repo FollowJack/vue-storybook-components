@@ -47,7 +47,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
+    <div class="bg-blue-100 p-4">
       <CardPortfolioElement v-bind="args" @click:card="onClick">
         <template #title>{{args.title}}</template>
         <template #content>{{args.content}}</template>

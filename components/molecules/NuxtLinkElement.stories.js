@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/LinkElement',
+  title: 'Molecules/NuxtLinkElement',
   argTypes: {
     variant: {
       options: [
@@ -44,9 +44,9 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100">
-      <LinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
+      <NuxtLinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
       Link to paradise...
-      </LinkElement>
+      </NuxtLinkElement>
     </div>
     `,
 })

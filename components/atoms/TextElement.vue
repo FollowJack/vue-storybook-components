@@ -3,12 +3,12 @@
     :is="as"
     :class="[
       {
-        'text-copy-large': variant === 'copy-large',
-        'text-copy-medium': variant === 'copy-medium',
-        'text-copy-small': variant === 'copy-small',
-        'text-headline1': variant === 'headline1',
-        'text-headline2': variant === 'headline2',
-        'text-headline3': variant === 'headline3',
+        'font-roboto text-copy-large': variant === 'copy-large',
+        'font-roboto text-copy-medium': variant === 'copy-medium',
+        'font-roboto text-copy-small': variant === 'copy-small',
+        'font-jost text-headline1': variant === 'headline1',
+        'font-jost text-headline2': variant === 'headline2',
+        'font-jost text-headline3': variant === 'headline3',
         'font-bold': weight === 'bold',
         'text-primary': color === 'primary',
         'text-font-black': color === 'black',

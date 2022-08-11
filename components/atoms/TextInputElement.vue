@@ -11,7 +11,7 @@
       :placeholder="placeholder"
       :readonly="readonly"
       :class="[
-        'py-4 px-5 bg-field-form rounded focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
+        'py-2 px-4 bg-field-form rounded focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
         {
           'text-font-black cursor-pointer hover:outline hover:outline-field-stroke-hover':
             !disabled,

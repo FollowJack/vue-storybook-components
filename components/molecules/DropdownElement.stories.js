@@ -3,6 +3,19 @@ import { action } from '@storybook/addon-actions'
 export default {
   title: 'Molecules/DropdownElement',
   argTypes: {
+    default: {
+      description: "The default Vue slot",
+      control: {
+        type: 'text',
+      },
+      defaultValue: "Dropdown",
+      table: {
+        category: 'Slots',
+        type: {
+          summary: 'html',
+        },
+      }
+    },
     variant: {
       options: [
         '', 'primary', 'secondary', 'outline', 'ghost', 'danger',
@@ -30,6 +43,7 @@ const Template = (args) => ({
     `
     <div class="bg-blue-100">
       <DropdownElement v-bind="args" @toggle="onToggle" @click:item="onClick">
+        <template>{{args.default}}</template>
         <template #content="{ handleClickItem }">
           <DropdownListItemElement
               @click:item="handleClickItem"

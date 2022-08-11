@@ -5,11 +5,17 @@
     :target="target"
     :class="[
       {
+        'px-6 inline-flex items-center': size !== '',
+        'h-16': size === 'large',
+        'h-12': size === 'medium',
+        'h-10': size === 'small',
+        'text-font-white hover:text-primary focus:text-primary':
+          variant === 'white' && !disabled,
         'text-font-gray hover:text-primary focus:text-primary':
           variant === 'gray' && !disabled,
         'text-primary hover:text-primary focus:text-primary':
           variant === 'primary' && !disabled,
-        'border-b border-transparent  hover:border-primary focus:border-b focus:border-primary':
+        'border-b border-transparent hover:border-primary focus:border-primary':
           !disabled && border,
         'text-font-disabled': disabled,
       },
@@ -31,7 +37,12 @@ const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
-    validator: (value) => ['gray', 'primary'].includes(value),
+    validator: (value) => ['white', 'gray', 'primary'].includes(value),
+  },
+  size: {
+    type: String,
+    default: '',
+    validator: (value) => ['', 'small', 'medium', 'large'].includes(value),
   },
   id: {
     type: String,

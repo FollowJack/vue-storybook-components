@@ -18,7 +18,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    // for calendly integration
+    { src: '@/plugins/vue-calendly', mode: 'client' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   // enable subfolders in automatic components detection: https://github.com/nuxt/components#migration-guide
@@ -34,6 +37,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org/setup
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,5 +64,14 @@ export default {
       '@storybook/addon-controls',
       '@storybook/addon-docs',
     ],
-  }
+  },
+
+  googleFonts: {
+    families: {
+      Roboto: [100, 400, 700,],
+      Jost: [100, 400, 700,],
+    },
+    display: 'swap',
+    download: true
+  },
 }

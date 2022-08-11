@@ -24,7 +24,7 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  link: "#",
+  href: "#",
   isActive: false,
 }
 

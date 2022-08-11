@@ -5,9 +5,9 @@
       // 'transition duration-700 ease-in-out',
       {
         // size
-        'px-6 py-4': size === 'large',
-        'px-6 py-2': size === 'medium',
-        'px-6 py-1': size === 'small',
+        'px-6 h-16': size === 'large',
+        'px-6 h-12': size === 'medium',
+        'px-6 h-10': size === 'small',
         // font color
         'text-font-white': variant === 'primary' && !disabled,
         'text-primary': variant === 'secondary' && !disabled,
@@ -53,7 +53,7 @@ defineProps({
   size: {
     type: String,
     default: 'small',
-    validator: (value) => ['small', 'medium', 'large'].includes(value),
+    validator: (value) => ['', 'small', 'medium', 'large'].includes(value),
   },
   type: {
     type: String,

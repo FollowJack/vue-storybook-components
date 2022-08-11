@@ -1,14 +1,15 @@
 <template>
   <LinkElement
-    :href="link"
+    :href="href"
     :border="false"
+    size="medium"
     :class="[
-      'py-3 px-4 hover:bg-secondary-hover focus:bg-secondary-hover rounded cursor-pointer',
+      'inline-flex items-center hover:bg-secondary-hover lg:hover:bg-transparent hover:text-primary focus:text-primary focus:bg-secondary-hover lg:focus:bg-transparent rounded cursor-pointer',
       {
         'bg-secondary-hover': isActive,
       },
     ]"
-    @click:link="handleClick"
+    @click.link="handleClick"
   >
     <slot />
   </LinkElement>
@@ -17,7 +18,7 @@
 <script setup>
 const emit = defineEmits(['click:nav'])
 defineProps({
-  link: {
+  href: {
     type: String,
     required: true,
   },
