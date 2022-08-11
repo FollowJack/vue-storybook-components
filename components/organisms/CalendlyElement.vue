@@ -3,6 +3,8 @@
 </template>
 
 <script setup>
+// docu: https://calendly.com/
+// plugin: https://www.npmjs.com/package/vue-calendly
 const emit = defineEmits(['calendly:loaded'])
 defineProps({
   url: {
