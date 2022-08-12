@@ -14,7 +14,7 @@
         // variations
         'text-font-black hover:text-font-gray':
           variant === 'ghost' && !disabled,
-        'bg-primary hover:bg-primary-hover focus:bg-primary-active':
+        'bg-primary box-content outline outline-primary hover:bg-primary-hover focus:bg-primary-active focus:outline-disabled':
           variant === 'primary' && !disabled,
         'bg-white box-content outline outline-primary hover:bg-secondary-hover focus:bg-secondary-active focus:outline-disabled':
           variant === 'secondary' && !disabled,

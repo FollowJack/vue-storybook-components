@@ -9,7 +9,7 @@
         'bg-secondary-hover': isActive,
       },
     ]"
-    @click.link="handleClick"
+    @click:nav="handleClick"
   >
     <slot />
   </LinkElement>
