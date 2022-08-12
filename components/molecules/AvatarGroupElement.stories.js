@@ -27,8 +27,8 @@ const Template = (args) => ({
       <AvatarElement :urlImage="urlImage" />
       <AvatarElement> SE </AvatarElement>
       <AvatarElement :urlImage="urlImage" />
-      <AvatarElement> XY </AvatarElement>
       <AvatarElement :urlImage="urlImage" />
+      <AvatarElement> XY </AvatarElement>
       </AvatarGroupElement>
     </div>
     `,

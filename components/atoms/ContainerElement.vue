@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+// docu: https://tailwindcss.com/docs/container
 defineProps({
   as: {
     type: String,

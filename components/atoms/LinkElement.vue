@@ -17,7 +17,7 @@
           variant === 'primary' && !disabled,
         'border-b border-transparent hover:border-primary focus:border-primary':
           !disabled && border,
-        'text-font-disabled': disabled,
+        'text-font-disabled cursor-not-allowed': disabled,
       },
     ]"
     @click="handleClick"

@@ -21,7 +21,7 @@ const Template = (args) => ({
     `
     <div class="bg-blue-100">
       <DropdownListItemElement v-bind="args" @click:item="onClick">
-        Content of the Element.
+        See DropdownListElement
       </DropdownListItemElement>
     </div>
     `,
