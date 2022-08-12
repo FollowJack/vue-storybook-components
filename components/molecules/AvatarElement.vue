@@ -1,7 +1,7 @@
 <template>
   <span
     :class="[
-      'rounded-full overflow-hidden block',
+      'rounded-full overflow-hidden block border',
       {
         'h-12 w-12': size === 'large',
         'h-10 w-10': size === 'medium',
@@ -50,8 +50,6 @@
 
 <script setup>
 import { computed, useSlots } from 'vue'
-import TextElement from '../atoms/TextElement.vue'
-
 const slots = useSlots()
 const emit = defineEmits(['toggle', 'click:avatar'])
 const props = defineProps({
