@@ -104,7 +104,6 @@ const pages = computed(() => {
   ) {
     range.push(pageIndex)
   }
-  debugger
 
   return range
 })
