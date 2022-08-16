@@ -36,7 +36,7 @@
     "@nuxtjs/storybook": "^4.3.1",
     "@nuxtjs/tailwindcss": "^5.3.1",
     "@storybook/addon-controls": "^6.5.9",
-    "@storybook/addon-docs": "^6.5.9",
+    "@storybook/addon-docs": "^6.5.10",
     "@storybook/theming": "^6.5.10",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
