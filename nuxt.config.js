@@ -1,3 +1,5 @@
+import { create } from '@storybook/theming';
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -77,11 +79,12 @@ export default {
           order: ['Docs Overview', 'Atoms', 'Molecules', 'Organisms', '*'],
         },
         // TODO Add logo
-        // theme: {
-        //   brandUrl: 'https://devparadise.io',p
-        //   brandImage: 'https://place-hold.it/350x150',
-        //   brandTarget: '_self',
-        // }
+        theme: create({
+          base: 'dark',
+          brandUrl: 'https://devparadise.io',
+          brandImage: '/images/logo.png',
+          // brandTarget: '_self',
+        })
       }
     }
   },

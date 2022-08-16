@@ -60,9 +60,7 @@ const Template = (args) => ({
   template:
     `
     <div class="bg-blue-100">
-      <div class="space-x-1">
-        <ButtonElement v-bind="args" @click:button="onClick">{{args.default}}</ButtonElement>
-      </div>
+      <ButtonElement v-bind="args" @click:button="onClick">{{args.default}}</ButtonElement>
     </div>
     `,
 })

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-black">
-    <header class="flex flex-col h-screen">
+    <header class="flex flex-col min-h-screen">
       <HeaderElement
         is-static
         class="bg-black"
@@ -72,7 +72,7 @@
           <ImageElement class="self-center" :src="urlProfile" />
         </template>
         <template #bottom>
-          <IconGroupElement class="pb-4" />
+          <IconGroupElement class="pb-4 mt-4" />
         </template>
       </HeroElement>
     </header>
