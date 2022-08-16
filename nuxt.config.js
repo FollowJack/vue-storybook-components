@@ -64,6 +64,18 @@ export default {
       '@storybook/addon-controls',
       '@storybook/addon-docs',
     ],
+    stories: [
+      '~/stories/**/*.stories.mdx',
+      '~/components/**/*.stories.js'
+    ],
+    parameters: {
+      options: {
+        storySort: {
+          method: 'alphabetical',
+          order: ['Docs Overview', 'Atoms', 'Molecules', 'Organisms', '*'],
+        }
+      }
+    }
   },
 
   googleFonts: {
