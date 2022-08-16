@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/BackdropElement',
+  title: 'Atoms/Backdrop',
 }
 
 const defaultArgs = {

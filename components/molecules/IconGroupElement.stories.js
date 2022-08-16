@@ -1,5 +1,5 @@
 export default {
-  title: 'Molecules/IconGroupElement',
+  title: 'Molecules/IconGroup',
 }
 
 const actionsData = {

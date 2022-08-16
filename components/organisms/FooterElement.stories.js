@@ -1,5 +1,5 @@
 export default {
-  title: 'Organisms/FooterElement',
+  title: 'Organisms/Footer',
   argTypes: {
     "left": {
       description: "The left slot",

@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/ModalElement',
+  title: 'Atoms/Modal',
   argTypes: {
     default: {
       description: "The default Vue slot",

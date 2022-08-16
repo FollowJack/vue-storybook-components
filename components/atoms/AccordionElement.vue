@@ -7,7 +7,7 @@
       <slot name="header" />
       <svg
         :class="[
-          'fill-current w-4 h-4 mr-1 ',
+          'fill-current w-4 h-4 mr-1',
           {
             rotate: !isOpen,
             'rotate-90': isOpen,

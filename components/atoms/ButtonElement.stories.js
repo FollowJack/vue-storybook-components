@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/ButtonElement',
+  title: 'Atoms/Button',
   argTypes: {
     default: {
       description: "The default Vue slot",

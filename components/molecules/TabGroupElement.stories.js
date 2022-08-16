@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/TabGroupElement',
+  title: 'Molecules/TabGroup',
 }
 
 const actionsData = {

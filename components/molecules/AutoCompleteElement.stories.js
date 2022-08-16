@@ -1,14 +1,14 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/PaginationItem',
+  title: 'Molecules/AutoComplete',
   argTypes: {
     default: {
       description: "The default Vue slot",
       control: {
         type: 'text',
       },
-      defaultValue: "1",
+      defaultValue: "Click me",
       table: {
         category: 'Slots',
         type: {
@@ -20,12 +20,21 @@ export default {
 }
 
 const actionsData = {
-  onClick: action('click:item'),
+  onClick: action('select:item'),
 }
 
 const defaultArgs = {
-  isActive: false,
-  ariaLabel: '',
+  availableItems: [{
+    name: 'Vue',
+  }, {
+    name: 'React',
+  }, {
+    name: 'Nuxt',
+  }],
+  selectedValues: [
+    { name: 'Nuxt' }
+  ],
+  searchValue: ''
 }
 
 const Template = (args) => ({
@@ -34,12 +43,9 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
-      <ul>
-        <PaginationItemElement v-bind="args" @click:item="onClick">
-        {{args.default}}
-        </PaginationItemElement>
-      </ul>
+    <div class="bg-blue-100">
+      <AutoCompleteElement v-bind="args" @select:item="onClick" class="w-96">
+      </AutoCompleteElement>
     </div>
     `,
 })

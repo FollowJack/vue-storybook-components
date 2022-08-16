@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/TextInputElement',
+  title: 'Atoms/TextInput',
   argTypes: {
     type: {
       options: [

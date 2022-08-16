@@ -1,5 +1,5 @@
 export default {
-  title: 'Molecules/BreadcrumbsElement',
+  title: 'Molecules/Breadcrumbs',
   argTypes: {
     divider: {
       description: "The slot for the divider",

@@ -27,8 +27,6 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-
 defineProps({
   as: {
     type: String,

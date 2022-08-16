@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Organisms/CalendlyElement',
+  title: 'Organisms/Calendly',
 }
 
 const actionsData = {

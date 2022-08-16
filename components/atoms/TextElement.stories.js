@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/TextElement',
+  title: 'Atoms/Text',
   argTypes: {
     default: {
       description: "The default Vue slot",

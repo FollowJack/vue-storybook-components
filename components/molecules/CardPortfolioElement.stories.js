@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/CardPortfolioElement',
+  title: 'Molecules/CardPortfolio',
   argTypes: {
     title: {
       description: "The title slot",

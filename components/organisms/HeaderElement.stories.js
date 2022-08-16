@@ -1,5 +1,5 @@
 export default {
-  title: 'Organisms/HeaderElement',
+  title: 'Organisms/Header',
 }
 
 const actionsData = {

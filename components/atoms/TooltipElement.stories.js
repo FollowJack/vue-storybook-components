@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/TooltipElement',
+  title: 'Atoms/Tooltip',
 }
 
 const actionsData = {

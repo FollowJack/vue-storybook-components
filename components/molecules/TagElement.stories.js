@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/TagElement',
+  title: 'Molecules/Tag',
   argTypes: {
     size: {
       options: [

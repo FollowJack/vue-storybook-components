@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/AvatarElement',
+  title: 'Molecules/Avatar',
   argTypes: {
     default: {
       description: "The default Vue slot",

@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/VideoElement',
+  title: 'Atoms/Video',
 }
 
 const defaultArgs = {

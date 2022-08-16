@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/LinkElement',
+  title: 'Atoms/Link',
   argTypes: {
     variant: {
       options: [

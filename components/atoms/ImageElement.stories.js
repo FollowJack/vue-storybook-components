@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/ImageElement',
+  title: 'Atoms/Image',
   argTypes: {
     loading: {
       options: [

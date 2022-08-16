@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/TextAreaElement',
+  title: 'Atoms/TextArea',
   argTypes: {
     variant: {
       options: [

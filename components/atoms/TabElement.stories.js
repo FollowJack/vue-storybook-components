@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/TabElement',
+  title: 'Atoms/Tab',
 }
 
 const actionsData = {

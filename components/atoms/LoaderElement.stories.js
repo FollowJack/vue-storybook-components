@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/LoaderElement',
+  title: 'Atoms/Loader',
   argTypes: {
     size: {
       options: [

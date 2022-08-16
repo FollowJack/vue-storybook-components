@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/AccordionElement',
+  title: 'Atoms/Accordion',
   argTypes: {
     header: {
       description: "The header slot",

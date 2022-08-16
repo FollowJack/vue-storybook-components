@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/AlertElement',
+  title: 'Atoms/Alert',
   argTypes: {
     header: {
       description: "The header slot",

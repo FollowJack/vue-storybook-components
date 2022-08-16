@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/ToggleElement',
+  title: 'Atoms/Toggle',
   argTypes: {
     size: {
       options: [

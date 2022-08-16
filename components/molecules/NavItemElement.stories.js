@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/NavItemElement',
+  title: 'Molecules/NavItem',
   argTypes: {
     default: {
       description: "The default Vue slot",

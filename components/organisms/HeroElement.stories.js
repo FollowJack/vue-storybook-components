@@ -1,5 +1,5 @@
 export default {
-  title: 'Organisms/HeroElement',
+  title: 'Organisms/Hero',
   argTypes: {
     "left": {
       description: "The left slot",

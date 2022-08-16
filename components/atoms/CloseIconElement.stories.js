@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/CloseIconElement',
+  title: 'Atoms/CloseIcon',
 }
 
 const actionsData = {

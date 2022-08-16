@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions'
 export default {
-  title: 'Atoms/CheckboxElement',
+  title: 'Atoms/Checkbox',
   argTypes: {
     size: {
       options: [

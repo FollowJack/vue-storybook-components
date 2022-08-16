@@ -1,5 +1,5 @@
 export default {
-  title: 'Atoms/ContainerElement',
+  title: 'Atoms/Container',
 }
 
 const defaultArgs = {
