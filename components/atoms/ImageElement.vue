@@ -3,6 +3,7 @@
 </template>
 
 <script setup>
+// docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
 defineProps({
   src: {
     type: String,
@@ -10,7 +11,7 @@ defineProps({
   },
   alt: {
     type: String,
-    default: '',
+    default: null,
   },
   loading: {
     type: String,

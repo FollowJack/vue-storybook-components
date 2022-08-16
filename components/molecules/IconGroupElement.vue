@@ -28,7 +28,7 @@
     <LinkElement
       variant="white"
       :border="false"
-      href="https://www.linkedin.com/in/dhorvatic/"
+      href="https://www.linkedin.com/in/devparadise/"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
@@ -81,7 +81,7 @@
     <LinkElement
       variant="white"
       :border="false"
-      href="mailto:hi@digitaldeni.de"
+      href="mailto:hi@devparadise.io"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"

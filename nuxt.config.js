@@ -29,6 +29,7 @@ export default {
     '~/components/atoms',
     '~/components/molecules',
     '~/components/organisms',
+    '~/components/pages',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -67,7 +68,7 @@ export default {
     ],
     stories: [
       '~/stories/**/*.stories.mdx',
-      '~/components/**/*.stories.js'
+      '~/components/**/*.stories.js',
     ],
     parameters: {
       options: {
@@ -77,7 +78,7 @@ export default {
         },
         // TODO Add logo
         // theme: {
-        //   brandUrl: 'https://devparadise.io',
+        //   brandUrl: 'https://devparadise.io',p
         //   brandImage: 'https://place-hold.it/350x150',
         //   brandTarget: '_self',
         // }

@@ -1,15 +1,17 @@
 <template>
   <div
-    class="h-full flex flex-col bg-secondary p-4 rounded-xl transition duration-700 ease-in-out hover:scale-105 cursor-pointer"
+    class="h-full flex flex-col bg-secondary p-4 rounded-xl cursor-pointer"
     @click="handleClick"
   >
-    <ImageElement
-      class="w-full mb-2 lg:mb-4 rounded-xl h-40 object-cover"
-      :src="urlImage"
-      :alt="alt"
-      width="100%"
-      loading="lazy"
-    />
+    <div class="overflow-hidden rounded-xl w-full h-40">
+      <ImageElement
+        class="w-full h-40 mb-2 lg:mb-4 object-cover transition duration-700 ease-in-out hover:scale-110"
+        :src="urlImage"
+        :alt="alt"
+        width="100%"
+        loading="lazy"
+      />
+    </div>
     <div>
       <TextElement as="p" variant="copy-small" color="gray">
         <slot name="title"

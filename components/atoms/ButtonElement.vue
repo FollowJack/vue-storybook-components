@@ -2,7 +2,6 @@
   <button
     :id="id"
     :class="[
-      // 'transition duration-700 ease-in-out',
       {
         // size
         'px-6 h-16': size === 'large',

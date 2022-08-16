@@ -11,10 +11,7 @@
     <!-- LOGO -->
     <slot name="logo">
       <LinkElement href="/" :border="false">
-        <ImageElement
-          class="h-8"
-          src="https://www.digitaldeni.de/_next/static/images/logo-073368f054afc8af2c4d6e487e8812aa.png"
-        />
+        <ImageElement class="h-8" src="https://via.placeholder.com/130x32" />
       </LinkElement>
     </slot>
 
@@ -23,12 +20,13 @@
       <slot name="navigation" :handle-select="handleSelect" />
       <slot name="cta" :handle-cta-click="() => handleCtaClick()" />
     </div>
-    <!-- MOBILE MENU ICON -->
+    <!-- MOBILE (hidden on desktop) -->
     <div class="lg:hidden">
+      <!-- MOBILE MENU ICON -->
       <slot name="mobile-menu-icon" :handle-menu-click="handleMenuClick"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6 text-stroke-gray"
+          class="w-6 h-6 text-stroke-gray cursor-pointer"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -42,8 +40,8 @@
           />
         </svg>
       </slot>
-      <!-- MOBILE SIDEBAR -->
 
+      <!-- MOBILE SIDEBAR -->
       <SidebarElement
         v-if="isSidebarVisible"
         class="lg:hidden"

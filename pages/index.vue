@@ -1,5 +1,6 @@
 <template>
-  <TextElement>Start your journey here</TextElement>
+  <!-- <TextElement>Start your journey here</TextElement> -->
+  <Portfolio />
 </template>
 
 <script lang="ts">
