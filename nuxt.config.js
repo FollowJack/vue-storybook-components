@@ -63,6 +63,7 @@ export default {
     addons: [
       '@storybook/addon-controls',
       '@storybook/addon-docs',
+      '@storybook/theming',
     ],
     stories: [
       '~/stories/**/*.stories.mdx',
@@ -73,7 +74,13 @@ export default {
         storySort: {
           method: 'alphabetical',
           order: ['Docs Overview', 'Atoms', 'Molecules', 'Organisms', '*'],
-        }
+        },
+        // TODO Add logo
+        // theme: {
+        //   brandUrl: 'https://devparadise.io',
+        //   brandImage: 'https://place-hold.it/350x150',
+        //   brandTarget: '_self',
+        // }
       }
     }
   },
