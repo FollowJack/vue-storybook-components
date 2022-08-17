@@ -166,16 +166,19 @@
                 ></path>
               </svg>
             </i>
-          </div>
-          <div class="flex items-center space-x-2">
-            <TextElement variant="copy-small" color="white"
-              >© 2022 All rights reserved.
-            </TextElement>
+            <TextElement as="p" variant="copy-small" color="white" class="mx-1"
+              >by</TextElement
+            >
             <LinkElement href="https://devparadise.io">
               <TextElement as="span" variant="copy-small" color="white">
                 DevParadise
               </TextElement>
             </LinkElement>
+          </div>
+          <div class="flex items-center space-x-2">
+            <TextElement variant="copy-small" color="white"
+              >© 2022 All rights reserved.
+            </TextElement>
           </div>
         </div>
       </template>

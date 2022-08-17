@@ -78,12 +78,10 @@ export default {
           method: 'alphabetical',
           order: ['Docs Overview', 'Atoms', 'Molecules', 'Organisms', '*'],
         },
-        // TODO Add logo
         theme: create({
           base: 'dark',
           brandUrl: 'https://devparadise.io',
           brandImage: '/images/logo.png',
-          // brandTarget: '_self',
         })
       }
     }

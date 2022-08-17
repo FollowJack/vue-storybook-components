@@ -1,5 +1,5 @@
 <template>
-  <details class="py-2 px-4" :open="isOpen">
+  <details class="py-2 px-4" :open="isOpen.value ? 'open' : null">
     <summary
       class="flex items-center justify-between cursor-pointer"
       @click.prevent="handleClick"
@@ -9,8 +9,8 @@
         :class="[
           'fill-current w-4 h-4 mr-1',
           {
-            rotate: !isOpen,
-            'rotate-90': isOpen,
+            rotate: !isOpen.value,
+            'rotate-90': isOpen.value,
           },
         ]"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,16 +21,25 @@
         />
       </svg>
     </summary>
-
-    <div class="mt-4">
-      <slot name="content" />
-    </div>
+    <transition
+      appear
+      enter-class="transform opacity-0 translate-x-full"
+      enter-active-class="duration-300 ease-out"
+      enter-to-class="opacity-100"
+      leave-class="opacity-100"
+      leave-active-class="duration-200 ease-in"
+      leave-to-class="transform opacity-0 translate-x-full"
+    >
+      <div v-if="isOpen.value" class="mt-2">
+        <slot name="content" />
+      </div>
+    </transition>
   </details>
 </template>
 
 <script setup>
 // docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
-import { ref } from 'vue'
+import { toRef } from '@vue/composition-api'
 
 const emit = defineEmits(['toggle:summary'])
 const props = defineProps({
@@ -38,21 +47,16 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  variant: {
-    type: String,
-    default: 'info',
-    validator: (value) => ['info', 'error', 'success'].includes(value),
-  },
   isInitialOpen: {
     type: Boolean,
     default: false,
   },
 })
 
-const isOpen = ref(props.isInitialOpen)
+const isOpen = toRef(props, 'isInitialOpen')
 
 function handleClick() {
   isOpen.value = !isOpen.value
-  emit('toggle:summary', isOpen.value)
+  emit('toggle:summary', props.id, isOpen.value)
 }
 </script>
