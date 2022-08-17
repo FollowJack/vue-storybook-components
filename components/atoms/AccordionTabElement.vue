@@ -23,12 +23,12 @@
     </summary>
     <transition
       appear
-      enter-class="transform opacity-0 translate-x-full"
-      enter-active-class="duration-300 ease-out"
+      enter-class="transform opacity-0 -translate-y-full"
+      enter-active-class="duration-100 ease-out"
       enter-to-class="opacity-100"
       leave-class="opacity-100"
       leave-active-class="duration-200 ease-in"
-      leave-to-class="transform opacity-0 translate-x-full"
+      leave-to-class="transform opacity-0 -translate-y-full"
     >
       <div v-if="isOpen.value" class="mt-2">
         <slot name="content" />

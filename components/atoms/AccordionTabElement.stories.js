@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Atoms/Accordion',
+  title: 'Atoms/AccordionTab',
   parameters: {
     docs: {
       description: {
@@ -21,7 +21,7 @@ Accordions are used to expand and collapse content related to a given heading. I
 <br/>
 
 ## Use cases
-1. Frequently Asked Questions (FAQs) - see Molecules/AccordionGroupElement for an example story
+1. Frequently Asked Questions (FAQs) - see Molecules/AccordionElement for an example story
 
         `,
       },
@@ -71,10 +71,10 @@ const Template = (args) => ({
   },
   template:
     `
-    <AccordionElement v-bind="args" @toggle:summary="onClick" class="bg-white">
+    <AccordionTabElement v-bind="args" @toggle:summary="onClick" class="bg-white">
       <template #header><TextElement as="h2" variant="copy-large" weight="bold">{{args.header}}</TextElement></template>
       <template #content><TextElement as="p">{{args.content}}</TextElement></template>
-    </AccordionElement>
+    </AccordionTabElement>
     `,
 })
 export const Default = Template.bind({})
