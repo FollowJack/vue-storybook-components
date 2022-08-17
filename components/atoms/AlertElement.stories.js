@@ -2,6 +2,20 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Atoms/Alert',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Alerts are used for feedback to to show alert messages to users.
+<br/>
+
+## Use cases
+1.
+
+        `,
+      },
+    },
+  },
   argTypes: {
     header: {
       description: "The header slot",
@@ -45,6 +59,7 @@ const actionsData = {
 const defaultArgs = {
   id: '1',
   variant: 'info',
+  isClosable: true,
 }
 
 const Template = (args) => ({
@@ -63,3 +78,6 @@ const Template = (args) => ({
 })
 export const Default = Template.bind({})
 Default.args = { ...defaultArgs }
+
+export const NotClosable = Template.bind({})
+NotClosable.args = { ...defaultArgs, isClosable: false }

@@ -54,35 +54,23 @@
       <slot name="header" />
       <slot name="content" />
     </div>
-    <span class="text-font-light-gray mt-0.5 cursor-pointer">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        @click="handleClick"
-      >
-        <path
-          d="M15 5L5 15"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M5 5L15 15"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
+    <CloseIconElement
+      v-if="isClosable"
+      :class="[
+        'mt-0.5 cursor-pointer',
+        {
+          'text-primary': variant === 'info',
+          'text-font-error': variant === 'error',
+          'text-font-success': variant === 'success',
+        },
+      ]"
+      @click:close="handleClick"
+    />
   </div>
 </template>
 
 <script setup>
+import CloseIconElement from './CloseIconElement.vue'
 const emit = defineEmits(['click:close'])
 const props = defineProps({
   id: {
@@ -93,6 +81,10 @@ const props = defineProps({
     type: String,
     default: 'info',
     validator: (value) => ['info', 'error', 'success'].includes(value),
+  },
+  isClosable: {
+    type: Boolean,
+    default: true,
   },
 })
 
