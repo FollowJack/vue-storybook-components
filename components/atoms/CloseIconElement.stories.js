@@ -17,7 +17,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
+    <div class="bg-blue-100 inline-flex">
       <CloseIconElement v-bind="args" @click:close="onClick" class="text-font-gray" />
     </div>
     `,

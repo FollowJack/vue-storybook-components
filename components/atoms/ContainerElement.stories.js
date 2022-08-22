@@ -1,5 +1,17 @@
 export default {
   title: 'Atoms/Container',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+A component for fixing an element's width to the current breakpoint.
+
+Resize the screen to see the max-width changes.
+
+See https://tailwindcss.com/docs/container for more information.`,
+      },
+    },
+  },
 }
 
 const defaultArgs = {
