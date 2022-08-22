@@ -4,7 +4,7 @@
       <slot name="tooltip-anchor" />
     </span>
     <div
-      class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex"
+      class="absolute bottom-0 flex-col items-center hidden mb-4 group-hover:flex"
     >
       <span
         class="relative z-tooltip p-2 bg-white whitespace-no-wrap shadow rounded"
