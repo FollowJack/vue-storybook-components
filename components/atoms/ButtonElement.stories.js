@@ -70,7 +70,6 @@ Buttons can be used to show the user’s choice of options for actions and assig
         type: 'text',
       },
     }
-
   },
 }
 

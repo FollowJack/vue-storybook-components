@@ -16,6 +16,24 @@ export default {
     pattern: {
       control: { type: 'text' },
     },
+    id: {
+      description: "The unique identifier",
+      control: {
+        type: 'text',
+      },
+    },
+    name: {
+      description: "The name of the control, which is submitted with the form data",
+      control: {
+        type: 'text',
+      },
+    },
+    value: {
+      description: "The value of the control, which is submitted with the form data",
+      control: {
+        type: 'text',
+      },
+    }
   }
 
 }
@@ -23,8 +41,7 @@ export default {
 const defaultArgs = {
   value: '',
   type: 'text',
-  name: 'input',
-  placeholder: 'Type me',
+  placeholder: 'Write inside me',
   disabled: false,
   readonly: false,
   maxlength: null,
@@ -39,9 +56,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
-      <TextInputElement v-bind="args" />
-    </div>
+    <TextInputElement v-bind="args" />
     `,
 })
 export const Default = Template.bind({})
