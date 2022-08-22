@@ -2,6 +2,15 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Atoms/DropdownListItem',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+DropdownListItem holds clickable information. They are used in conjunction with DropdownElement to go for further subsections or options to choose.
+        `,
+      },
+    },
+  },
 }
 
 const actionsData = {
@@ -9,7 +18,7 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  value: '',
+  value: null,
   disabled: false,
 }
 
@@ -19,10 +28,8 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <DropdownListItemElement v-bind="args" @click:item="onClick">
-        See DropdownListElement
-      </DropdownListItemElement>
+    <DropdownListItemElement v-bind="args" @click:item="onClick">
+        Hover over me. See DropdownListElement for a complete example.
     </div>
     `,
 })

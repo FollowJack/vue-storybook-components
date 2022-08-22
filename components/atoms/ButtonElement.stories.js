@@ -46,6 +46,31 @@ Buttons can be used to show the user’s choice of options for actions and assig
       ],
       control: { type: 'radio' },
     },
+    id: {
+      description: "The unique identifier",
+      control: {
+        type: 'text',
+      },
+    },
+    ariaLabel: {
+      description: "Aria label for cases where a text label is not visible on the screen",
+      control: {
+        type: 'text',
+      },
+    },
+    name: {
+      description: "The name of the control, which is submitted with the form data",
+      control: {
+        type: 'text',
+      },
+    },
+    value: {
+      description: "The value of the control, which is submitted with the form data",
+      control: {
+        type: 'text',
+      },
+    }
+
   },
 }
 
@@ -57,12 +82,12 @@ const defaultArgs = {
   variant: 'primary',
   size: 'small',
   rounded: true,
-  ariaLabel: '',
+  ariaLabel: null,
   type: 'button',
-  id: '',
+  id: null,
   disabled: false,
-  name: '',
-  value: '',
+  name: null,
+  value: null,
 }
 
 

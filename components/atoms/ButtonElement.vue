@@ -29,7 +29,7 @@
     :name="name"
     :type="type"
     :value="value"
-    @click="$emit('click:button')"
+    @click="handleClick"
   >
     <slot />
   </button>
@@ -37,8 +37,8 @@
 
 <script setup>
 // docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
-defineEmits(['click:button'])
-defineProps({
+const emit = defineEmits(['click:button'])
+const props = defineProps({
   variant: {
     type: String,
     default: '',
@@ -61,11 +61,11 @@ defineProps({
   },
   id: {
     type: String,
-    default: '',
+    default: null,
   },
   ariaLabel: {
     type: String,
-    default: '',
+    default: null,
   },
   disabled: {
     type: Boolean,
@@ -73,11 +73,15 @@ defineProps({
   },
   name: {
     type: String,
-    default: '',
+    default: null,
   },
   value: {
     type: String,
-    default: '',
+    default: null,
   },
 })
+
+function handleClick() {
+  emit('click:button', props.id, props.value)
+}
 </script>

@@ -1,5 +1,14 @@
 export default {
   title: 'Atoms/Image',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Image can be used to lazy load the image.
+`
+      }
+    }
+  },
   argTypes: {
     loading: {
       options: [
@@ -7,12 +16,18 @@ export default {
       ],
       control: { type: 'radio' },
     },
+    alt: {
+      description: "The alt attribute specifies an alternate text for an image, if the image cannot be displayed.",
+      control: {
+        type: 'text',
+      },
+    },
   }
 }
 
 const defaultArgs = {
   src: "https://via.placeholder.com/300",
-  alt: "",
+  alt: null,
   loading: "eager"
 }
 

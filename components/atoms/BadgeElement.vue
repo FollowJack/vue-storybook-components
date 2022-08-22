@@ -1,5 +1,6 @@
 <template>
   <span
+    :id="id"
     :class="[
       'inline-flex justify-center rounded-full cursor-pointer',
       {
@@ -24,7 +25,11 @@
 <script setup>
 import { useSlots } from 'vue'
 const emit = defineEmits(['click:badge'])
-defineProps({
+const props = defineProps({
+  id: {
+    type: String,
+    default: null,
+  },
   variant: {
     type: String,
     default: 'danger',
@@ -35,6 +40,6 @@ defineProps({
 const slots = useSlots()
 
 function handleClick() {
-  emit('click:badge')
+  emit('click:badge', props.id)
 }
 </script>
