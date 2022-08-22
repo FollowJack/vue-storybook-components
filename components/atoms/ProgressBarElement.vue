@@ -33,7 +33,7 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'black',
+    default: 'primary',
     validator: (value) =>
       [
         'primary',
@@ -46,6 +46,8 @@ const props = defineProps({
   },
 })
 const percent = computed(() => {
-  return (props.value / props.max) * 100
+  const value = (props.value / props.max) * 100
+  // truncate 0 digits after the comma
+  return value.toFixed(0)
 })
 </script>
