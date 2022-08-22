@@ -10,7 +10,7 @@ Alerts are used for feedback to to show alert messages to users.
 <br/>
 
 ## Use cases
-1.
+1. For urgent interruptions, requiring acknowledgment, that inform the user about a situation.
 
         `,
       },
@@ -49,6 +49,12 @@ Alerts are used for feedback to to show alert messages to users.
       ],
       control: { type: 'radio' },
     },
+    id: {
+      description: "The unique identifier",
+      control: {
+        type: 'text',
+      },
+    }
   }
 }
 
@@ -57,7 +63,7 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  id: '1',
+  id: null,
   variant: 'info',
   isClosable: true,
 }
@@ -68,7 +74,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
+    <div>
       <AlertElement v-bind="args" @click:close="onClick">
         <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
         <template #content><TextELement as="div">{{args.content}}</TextELement></template>
@@ -81,3 +87,36 @@ Default.args = { ...defaultArgs }
 
 export const NotClosable = Template.bind({})
 NotClosable.args = { ...defaultArgs, isClosable: false }
+NotClosable.parameters = {
+  docs: {
+    description: {
+      story: 'With `isClosable: false` -> close icon is not visible anymore.',
+    },
+  },
+};
+
+const TemplateVariations = (args) => ({
+  setup() {
+    return { args, ...actionsData }
+  },
+  template:
+    `
+    <div class="space-y-1">
+      <AlertElement variant="info" @click:close="onClick">
+        <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
+        <template #content><TextELement as="div">{{args.content}}</TextELement></template>
+      </AlertElement>
+      <AlertElement variant="error" @click:close="onClick">
+        <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
+        <template #content><TextELement as="div">{{args.content}}</TextELement></template>
+      </AlertElement>
+      <AlertElement variant="success" @click:close="onClick">
+        <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
+        <template #content><TextELement as="div">{{args.content}}</TextELement></template>
+      </AlertElement>
+    </div>
+    `,
+})
+export const Variations = TemplateVariations.bind({})
+Variations.args = { ...defaultArgs }
+

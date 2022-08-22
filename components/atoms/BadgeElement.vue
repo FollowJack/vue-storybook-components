@@ -1,7 +1,7 @@
 <template>
   <span
     :class="[
-      'rounded-full',
+      'inline-flex justify-center rounded-full cursor-pointer',
       {
         'px-1': slots.default,
         'h-2 w-2 block': !slots.default,

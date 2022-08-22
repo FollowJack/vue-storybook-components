@@ -10,6 +10,7 @@
       },
     ]"
   >
+    <!-- INFO ICON -->
     <span
       :class="[
         'mt-0.5',
@@ -75,7 +76,7 @@ const emit = defineEmits(['click:close'])
 const props = defineProps({
   id: {
     type: String,
-    default: '',
+    default: null,
   },
   variant: {
     type: String,
