@@ -2,6 +2,16 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Atoms/Tab',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Use the tabs component when a set of related content would benefit from being split between different views that the user can navigate through to digest the information.
+They are used in conjunction with TabGroupElement to group further subsections.
+        `,
+      },
+    },
+  },
 }
 
 const actionsData = {
@@ -20,9 +30,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <TabElement v-bind="args" @update:selected="onClick">Tab 1</TabElement>
-    </div>
+    <TabElement v-bind="args" @update:selected="onClick">Tab 1</TabElement>
     `,
 })
 export const Default = Template.bind({})
