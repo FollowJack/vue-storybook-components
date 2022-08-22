@@ -54,10 +54,10 @@
 <script setup>
 // docu: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
 const emit = defineEmits(['update:value'])
-defineProps({
+const props = defineProps({
   id: {
     type: String,
-    default: '',
+    default: null,
   },
   options: {
     type: Array,
@@ -66,6 +66,7 @@ defineProps({
   selectedValue: {
     type: Object,
     default: () => {},
+    // format is { value: any, content: any}
   },
   disabled: {
     type: Boolean,
@@ -73,11 +74,11 @@ defineProps({
   },
   name: {
     type: String,
-    default: '',
+    default: null,
   },
 })
 
 function handleSelect(newSelected) {
-  emit('update:value', newSelected)
+  emit('update:value', newSelected, props.id)
 }
 </script>
