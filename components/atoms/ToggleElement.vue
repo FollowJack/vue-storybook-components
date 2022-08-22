@@ -18,7 +18,7 @@
     />
     <div
       :class="[
-        ' flex items-center rounded-full duration-300 ease-in-out',
+        'flex items-center rounded-full duration-300 ease-in-out',
         {
           'p-0.5 w-6 h-4': size === 'small',
           'p-1 w-10 h-6': size === 'medium',
