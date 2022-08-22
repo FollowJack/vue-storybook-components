@@ -37,9 +37,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <ImageElement v-bind="args"/>
-    </div>
+    <ImageElement v-bind="args"/>
     `,
 })
 export const Default = Template.bind({})

@@ -32,11 +32,9 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <CheckboxElement v-bind="args" @input:value="onInput">
-        <span>Click me</span>
-      </CheckboxElement>
-    </div>
+    <CheckboxElement v-bind="args" @input:value="onInput">
+      <TextElement color="primary">Click me</TextElement>
+    </CheckboxElement>
     `,
 })
 export const Default = Template.bind({})
@@ -54,11 +52,9 @@ const TemplateSizes = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <CheckboxElement v-for="size in sizes" :size="size" v-bind="args" @input:value="onInput">
-        <span>Click me</span>
-      </CheckboxElement>
-    </div>
+    <CheckboxElement v-for="size in sizes" :size="size" v-bind="args" @input:value="onInput">
+      <span>Click me</span>
+    </CheckboxElement>
     `,
 })
 export const Sizes = TemplateSizes.bind({})

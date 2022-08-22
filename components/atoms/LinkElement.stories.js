@@ -2,6 +2,14 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Atoms/Link',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+The anchor HTML element, with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.`
+      }
+    }
+  },
   argTypes: {
     variant: {
       options: [
@@ -43,11 +51,9 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <LinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
-      Link to paradise...
-      </LinkElement>
-    </div>
+    <LinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
+    Link to paradise...
+    </LinkElement>
     `,
 })
 export const Default = Template.bind({})
