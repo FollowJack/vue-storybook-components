@@ -119,7 +119,7 @@ const TemplateVariants = (args) => ({
     `
     <div class="flex flex-col space-y-2">
       <div class="flex justify-between">
-        <TextElement class="w-20">Sizes</TextElement>
+        <TextElement class="w-20"></TextElement>
         <TextElement v-for="size in sizes" :key="size">{{size}}</TextElement>
       </div>
       <div class="flex justify-between" v-for="variant in variants" :key="variant">

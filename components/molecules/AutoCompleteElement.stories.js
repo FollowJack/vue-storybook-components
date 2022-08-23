@@ -2,21 +2,15 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/AutoComplete',
-  argTypes: {
-    default: {
-      description: "The default Vue slot",
-      control: {
-        type: 'text',
-      },
-      defaultValue: "Click me",
-      table: {
-        category: 'Slots',
-        type: {
-          summary: 'html',
-        },
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Overlay can be used to show the user’s choice of options for an input. See SearchInput for an example.
+`
       }
-    },
-  }
+    }
+  },
 }
 
 const actionsData = {

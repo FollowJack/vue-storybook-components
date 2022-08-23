@@ -1,12 +1,12 @@
 <template>
   <nav class="flex" aria-label="Breadcrumb">
-    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    <ol class="inline-flex items-center">
       <li
         v-for="(breadcrumb, index) in breadcrumbs"
         :key="breadcrumb.text"
-        class="inline-flex items-center"
+        class="inline-flex items-center space-x-1 md:space-x-3"
       >
-        <span v-if="hasDivider(index)" class="text-font-gray">
+        <span v-if="hasDivider(index)" class="text-font-gray ml-1 md:ml-3">
           <slot name="divider">
             <svg
               class="w-6 h-6"

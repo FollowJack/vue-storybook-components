@@ -99,7 +99,7 @@ const TemplateFAQ = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
+    <div class="bg-blue-100 lg:w-1/2">
       <AccordionElement v-bind="args" v-slot="{ selectedIds, handleSelect }" @toggle:summary="onClick">
         <AccordionTabElement id="1" @toggle:summary="handleSelect" :is-initial-open="selectedIds.includes('1')">
           <template #header><TextElement as="h2" variant="copy-large" weight="bold">

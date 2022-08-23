@@ -1,5 +1,14 @@
 export default {
   title: 'Atoms/Video',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+The video tag is used to embed video content in a document, such as a movie clip or other video streams.
+`
+      }
+    }
+  },
 }
 
 const defaultArgs = {
