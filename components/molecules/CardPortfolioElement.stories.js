@@ -2,6 +2,18 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/CardPortfolio',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Simple rectangular container. The content can consist of multiple elements of varying types and sizes.
+
+# Use cases
+- A card can be used to display content related to a single subject.
+`
+      }
+    }
+  },
   argTypes: {
     title: {
       description: "The title slot",
@@ -47,12 +59,10 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 p-4">
-      <CardPortfolioElement v-bind="args" @click:card="onClick">
-        <template #title>{{args.title}}</template>
-        <template #content>{{args.content}}</template>
-      </CardPortfolioElement>
-    </div>
+    <CardPortfolioElement v-bind="args" @click:card="onClick" class="w-full md:w-1/3 lg:w-1/4">
+      <template #title>{{args.title}}</template>
+      <template #content>{{args.content}}</template>
+    </CardPortfolioElement>
     `,
 })
 export const Default = Template.bind({})
