@@ -11,6 +11,8 @@
         'h-10': size === 'small',
         'text-font-white hover:text-primary focus:text-primary':
           variant === 'white' && !disabled,
+        'text-font-black hover:text-primary focus:text-primary':
+          variant === 'black' && !disabled,
         'text-font-gray hover:text-primary focus:text-primary':
           variant === 'gray' && !disabled,
         'text-primary hover:text-primary focus:text-primary':
@@ -37,7 +39,7 @@ const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
-    validator: (value) => ['white', 'gray', 'primary'].includes(value),
+    validator: (value) => ['white', 'black', 'gray', 'primary'].includes(value),
   },
   size: {
     type: String,

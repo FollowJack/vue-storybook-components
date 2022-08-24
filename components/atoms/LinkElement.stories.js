@@ -1,5 +1,14 @@
 import { action } from '@storybook/addon-actions'
 
+
+const variants = [
+  'gray', 'primary', 'white', 'black'
+]
+
+const sizes = [
+  '', 'small', 'medium', 'large',
+]
+
 export default {
   title: 'Atoms/Link',
   parameters: {
@@ -12,15 +21,11 @@ The anchor HTML element, with its href attribute, creates a hyperlink to web pag
   },
   argTypes: {
     variant: {
-      options: [
-        'gray', 'primary'
-      ],
+      options: variants,
       control: { type: 'radio' },
     },
     size: {
-      options: [
-        '', 'small', 'medium', 'large',
-      ],
+      options: sizes,
       control: { type: 'radio' },
     },
     target: {
@@ -58,3 +63,38 @@ const Template = (args) => ({
 })
 export const Default = Template.bind({})
 Default.args = { ...defaultArgs }
+
+
+const variantsArgs = {
+  href: '#',
+  id: '',
+  target: '_self',
+  disabled: false,
+  border: true,
+}
+
+const TemplateVariant = (args) => ({
+  data() {
+    return {
+      variants,
+      sizes,
+    }
+  },
+  setup() {
+    return { args, ...actionsData }
+  },
+  template:
+    `
+    <div>
+      <div class="flex flex-1" v-for="size in sizes" :key="size">
+        <div class="flex flex-1" v-for="variant in variants" :key="variant">
+          <LinkElement :variant="variant" :size="size" v-bind="args" @click:link="onClick" color="text-font-gray">
+            Size:{{size}} | Variant:{{variant}}
+          </LinkElement>
+        </div>
+      </div>
+    </div>
+    `,
+})
+export const Variants = TemplateVariant.bind({})
+Variants.args = { ...variantsArgs }
