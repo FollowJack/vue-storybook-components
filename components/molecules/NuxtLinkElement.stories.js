@@ -2,6 +2,14 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/NuxtLink',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+A wrapper around the nuxtlink component. See the documentation: https://v3.nuxtjs.org/api/components/nuxt-link/ `
+      }
+    }
+  },
   argTypes: {
     variant: {
       options: [
@@ -43,11 +51,9 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <NuxtLinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
-      Link to paradise...
-      </NuxtLinkElement>
-    </div>
+    <NuxtLinkElement v-bind="args" @click:link="onClick" color="text-font-gray">
+    Link to paradise...
+    </NuxtLinkElement>
     `,
 })
 export const Default = Template.bind({})
