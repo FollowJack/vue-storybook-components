@@ -52,9 +52,11 @@ const TemplateSizes = (args) => ({
   },
   template:
     `
-    <CheckboxElement v-for="size in sizes" :size="size" v-bind="args" @input:value="onInput">
-      <span>Click me</span>
-    </CheckboxElement>
+    <div class="flex flex-col space-y-4">
+      <CheckboxElement v-for="size in sizes" :size="size" :key="size" v-bind="args" @input:value="onInput">
+        <span>Size: {{size}}</span>
+      </CheckboxElement>
+    </div>
     `,
 })
 export const Sizes = TemplateSizes.bind({})
