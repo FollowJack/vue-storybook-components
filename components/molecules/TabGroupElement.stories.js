@@ -44,7 +44,6 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
       <TabGroupElement v-slot="{ selected, handleSelect }" v-bind="args" @select:tab="onClick">
         <TabElement id="0" :selected="selected" @update:selected="handleSelect"
           >Profile</TabElement
@@ -60,7 +59,6 @@ const Template = (args) => ({
           >Disabled</TabElement
         >
       </TabGroupElement>
-    </div>
     `,
 })
 export const Default = Template.bind({})
