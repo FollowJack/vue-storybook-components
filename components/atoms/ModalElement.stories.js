@@ -13,7 +13,6 @@ When requiring users to interact with the application, but without jumping to a 
     },
     layout: 'fullscreen'
   },
-
   argTypes: {
     default: {
       description: "The default Vue slot",
