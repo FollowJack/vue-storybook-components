@@ -1,5 +1,14 @@
 export default {
   title: 'Molecules/IconGroup',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Group of social icons like facebook, linkedIn and others. You can copy and adapt as you like.
+`
+      }
+    },
+  },
 }
 
 const actionsData = {
@@ -14,7 +23,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
+    <div class="space-x-1">
       <IconGroupElement/>
     </div>
     `,
