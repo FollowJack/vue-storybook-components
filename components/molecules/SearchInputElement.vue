@@ -14,7 +14,7 @@
       :class="[
         'py-2 px-4 bg-field-form rounded focus:ring-field-stroke-focused focus:outline-field-stroke-focused',
         {
-          'text-font-black cursor-pointer hover:outline hover:outline-field-stroke-hover':
+          'text-font-black cursor-text hover:outline hover:outline-field-stroke-hover':
             !disabled,
           'text-font-disabled cursor-not-allowed': disabled,
         },
