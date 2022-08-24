@@ -1,5 +1,21 @@
 export default {
   title: 'Organisms/Header',
+  parameters: {
+    docs: {
+      // Opt-out of inline rendering
+      inlineStories: false,
+      iframeHeight: '400px',
+      description: {
+        component: `
+A menu for navigation.
+
+# Use cases
+- Navigation is an important part of any website, as a good navigation setup allows users to move around the site quickly and efficiently.
+`
+      }
+    },
+    layout: 'fullscreen'
+  },
 }
 
 const actionsData = {
@@ -15,7 +31,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 h-screen">
+    <div class="h-screen">
       <div class="bg-white border">
         <HeaderElement v-bind="args" class="bg-white border-stroke-gray">
           <template #navigation="{ handleSelect }" v-bind="args">

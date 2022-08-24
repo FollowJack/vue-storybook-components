@@ -1,12 +1,21 @@
 export default {
   title: 'Organisms/Footer',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Footer can be used to layout the content. On purpose kept simple to adapt it to your needs.
+`
+      }
+    }
+  },
   argTypes: {
     "left": {
       description: "The left slot",
       control: {
         type: 'text',
       },
-      defaultValue: "Left",
+      defaultValue: "Left content",
       table: {
         category: 'Slots',
         type: {
@@ -19,7 +28,7 @@ export default {
       control: {
         type: 'text',
       },
-      defaultValue: "right",
+      defaultValue: "Right content",
       table: {
         category: 'Slots',
         type: {
@@ -32,7 +41,7 @@ export default {
       control: {
         type: 'text',
       },
-      defaultValue: "bottom",
+      defaultValue: "Bottom content",
       table: {
         category: 'Slots',
         type: {
@@ -55,13 +64,11 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-      <FooterElement v-bind="args" class="bg-red-100">
+      <FooterElement v-bind="args" class="bg-blue-100">
         <template #left>{{args.left}}</template>
         <template #right>{{args.right}}</template>
         <template #bottom>{{args.bottom}}</template>
       </FooterElement>
-    </div>
     `,
 })
 export const Default = Template.bind({})
