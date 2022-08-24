@@ -76,7 +76,7 @@ const TemplateVariations = (args) => ({
   },
   template:
     `
-    <div class="inline-flex flex-col space-y-1">
+    <div class="inline-flex flex-col space-y-2">
       <BadgeElement variant="primary" @click:badge="onClick">
         primary
       </BadgeElement>
