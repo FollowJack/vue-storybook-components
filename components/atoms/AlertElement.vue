@@ -58,7 +58,7 @@
     <CloseIconElement
       v-if="isClosable"
       :class="[
-        'mt-0.5 cursor-pointer',
+        'mt-0.5 cursor-pointer h-6 w-6',
         {
           'text-primary': variant === 'info',
           'text-font-error': variant === 'error',
