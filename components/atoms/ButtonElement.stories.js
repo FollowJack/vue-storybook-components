@@ -13,7 +13,24 @@ export default {
     docs: {
       description: {
         component: `
-Buttons can be used to show the user’s choice of options for actions and assign these to a clear hierarchy.
+Buttons are used to show the user’s choice of options for actions and assign these to a clear hierarchy. A button helps the user to find the most important actions of a page or within a viewport and enables them to perform these actions. The label is used to clearly indicate to the user what action will be triggered. Buttons allow users to commit a change, complete steps in a task, or make choices.
+
+# Best practices
+- Use a primary button for the next best action. Remaining calls-to-action should be represented as secondary or text buttons.
+- Use buttons in consistent locations in the user interface to improve user experience.
+- Only use one primary button per viewport, no limits per page.
+- Button labels must describe the action the button will perform and should include a verb. Use concise, specific, self-explanatory labels.
+- Button labels should always include a noun if there is any room for interpretation about what the verb operates on.
+- Do not use generic labels like "Ok," especially in the case of an error; errors are never "Ok".
+- Use the button group component when there is a need to combine or lay out multiple buttons, and express different emphasis levels (e.g. one primary button and one secondary button).
+- Do not use a primary button with a text button in a button group.
+- Do not use a button for a text link or navigation item.
+
+# Use cases
+- Key calls to action, such as "Request a quote" or "Schedule a call."
+- Supporting calls to action, such as "Learn more" or "Explore."
+- Legal calls to action, such as "View key offer details."
+- Alongside an input field, when there is an action to be taken after the user has inputted their information (e.g. searching for options).
 `
       }
     }
