@@ -2,6 +2,19 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Organisms/Calendly',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Calendly can be used to schedule calendar events.
+
+docu: https://calendly.com/
+
+plugin: https://www.npmjs.com/package/vue-calendly
+`
+      }
+    }
+  },
 }
 
 const actionsData = {
@@ -18,10 +31,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 h-screen">
-      <CalendlyElement v-bind="args" @calendly:loaded="onClick">
-      </CalendlyElement>
-    </div>
+      <CalendlyElement v-bind="args" class="h-30" @calendly:loaded="onClick" />
     `,
 })
 export const Default = Template.bind({})

@@ -1,5 +1,5 @@
 <template>
-  <vue-calendly :url="url" style="height: 600px" @load="handleLoad" />
+  <vue-calendly :url="url" @load="handleLoad" />
 </template>
 
 <script setup>
