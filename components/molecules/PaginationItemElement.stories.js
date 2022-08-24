@@ -2,6 +2,15 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/PaginationItem',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+PaginationItem is the visible representation which is used in conjunction with pagination.
+`
+      }
+    }
+  },
   argTypes: {
     default: {
       description: "The default Vue slot",
@@ -34,13 +43,11 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
       <ul>
         <PaginationItemElement v-bind="args" @click:item="onClick">
         {{args.default}}
         </PaginationItemElement>
       </ul>
-    </div>
     `,
 })
 export const Default = Template.bind({})
