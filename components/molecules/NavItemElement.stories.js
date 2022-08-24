@@ -2,6 +2,15 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/NavItem',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Navitem is part of the header component.
+`
+      }
+    }
+  },
   argTypes: {
     default: {
       description: "The default Vue slot",
@@ -34,11 +43,9 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 space-x-1">
-      <NavItemElement v-bind="args" @click:nav="onClick">
-        {{args.default}}
-      </NavItemElement>
-    </div>
+    <NavItemElement v-bind="args" @click:nav="onClick">
+      {{args.default}}
+    </NavItemElement>
     `,
 })
 export const Default = Template.bind({})
