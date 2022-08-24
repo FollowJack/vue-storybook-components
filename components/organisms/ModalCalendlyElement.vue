@@ -2,7 +2,7 @@
   <ModalElement class="z-modal flex flex-col" @close="handleClose">
     <LoaderElement v-if="!isLoaded" class="m-auto fixed inset-0" />
     <CalendlyElement
-      class="flex-1 w-screen md:w-[60vw] h-[30rem]"
+      class="flex-1 w-screen md:w-[60vw] h-[25rem]"
       @calendly:loaded="handleLoaded"
     />
   </ModalElement>

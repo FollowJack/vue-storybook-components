@@ -2,6 +2,19 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Organisms/ModalCalendly',
+  parameters: {
+    docs: {
+      // Opt-out of inline rendering
+      inlineStories: false,
+      iframeHeight: '600px',
+      description: {
+        component: `
+A modal wrapper for calendly. See calendly component for further details.
+`
+      }
+    },
+    layout: 'fullscreen'
+  },
 }
 
 const actionsData = {
