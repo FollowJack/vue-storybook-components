@@ -1,12 +1,26 @@
 export default {
   title: 'Organisms/Hero',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+The hero component is a flexible but advanced component that can combine images, colours, text, links and calls to action.
+Hero is taking the full screen height.
+
+# Use cases
+- Splashy home page banners.
+- Can be used to separate sections on landing pages, or for temporary or promotional content.
+`
+      }
+    }
+  },
   argTypes: {
     "left": {
       description: "The left slot",
       control: {
         type: 'text',
       },
-      defaultValue: "Left",
+      defaultValue: "Left content (main content) with e.g. CTA button.",
       table: {
         category: 'Slots',
         type: {
@@ -19,7 +33,7 @@ export default {
       control: {
         type: 'text',
       },
-      defaultValue: "right",
+      defaultValue: "Right. Additional information or visual representations which is hidden on smaller devices.",
       table: {
         category: 'Slots',
         type: {
@@ -28,11 +42,11 @@ export default {
       }
     },
     "bottom": {
-      description: "The bottom slot",
+      description: "The bottom slot.",
       control: {
         type: 'text',
       },
-      defaultValue: "bottom",
+      defaultValue: "Bottom. For further information.",
       table: {
         category: 'Slots',
         type: {
@@ -55,13 +69,11 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100 h-screen">
-      <HeroElement v-bind="args" class="h-screen bg-red-100">
-        <template #left>{{args.left}}</template>
-        <template #right>{{args.right}}</template>
-        <template #bottom>{{args.bottom}}</template>
-      </HeroElement>
-    </div>
+    <HeroElement v-bind="args" class="h-screen bg-blue-100">
+      <template #left>{{args.left}}</template>
+      <template #right>{{args.right}}</template>
+      <template #bottom>{{args.bottom}}</template>
+    </HeroElement>
     `,
 })
 export const Default = Template.bind({})
