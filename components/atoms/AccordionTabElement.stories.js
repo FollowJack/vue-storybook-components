@@ -71,7 +71,7 @@ const Template = (args) => ({
   },
   template:
     `
-    <AccordionTabElement v-bind="args" @toggle:summary="onClick" class="bg-white">
+    <AccordionTabElement v-bind="args" @toggle:summary="onClick" class="bg-blue-100 lg:w-1/2">
       <template #header><TextElement as="h2" variant="copy-large" weight="bold">{{args.header}}</TextElement></template>
       <template #content><TextElement as="p">{{args.content}}</TextElement></template>
     </AccordionTabElement>

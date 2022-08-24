@@ -52,7 +52,7 @@ const Template = (args) => ({
     `
     <div class="flex items-center justify-center h-screen w-screen ">
       <ButtonElement variant="primary" @click.native='() => isVisible=true'>Open Sidebar</ButtonElement>
-      <SidebarElement v-if="isVisible" v-bind="args" @close:sidebar="isVisible=false">
+      <SidebarElement v-if="isVisible" v-bind="args" @close:sidebar="isVisible=false; onClick()">
         <div class="h-full w-full">{{args.default}}</div>
       </SidebarElement>
     </div>

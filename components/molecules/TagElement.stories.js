@@ -74,13 +74,13 @@ const TemplateSizes = (args) => ({
     `
     <div class="space-x-1">
       <TagElement size="small" v-bind="args" @click:remove="onClick">
-        Vue.js
+      small
       </TagElement>
       <TagElement size="medium" v-bind="args" @click:remove="onClick">
-        Vue.js
+      medium
       </TagElement>
       <TagElement size="large" v-bind="args" @click:remove="onClick">
-        Vue.js
+      large
       </TagElement>
     </div>
     `,

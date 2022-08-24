@@ -24,10 +24,10 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
+    <div class="bg-blue-100 h-screen">
       Outside of the container. No margin on the horizontal if the screen is desktop.
-      <ContainerElement v-bind="args" class="bg-primary">
-        Inside the container. Horizontal space if the screen is desktop.
+      <ContainerElement v-bind="args" class="bg-primary h-20">
+        Inside the container. Horizontal margin space if the screen is desktop.
       </ContainerElement>
     </div>
     `,

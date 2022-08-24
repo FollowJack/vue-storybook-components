@@ -4,6 +4,9 @@ export default {
   title: 'Molecules/SearchInput',
   parameters: {
     docs: {
+      // Opt-out of inline rendering
+      inlineStories: false,
+      iframeHeight: '200px',
       description: {
         component: `
 Search fields allow users to find or filter information based on a specific input entered within the field.
@@ -19,7 +22,8 @@ Search fields allow users to find or filter information based on a specific inpu
 - Search for customer information.
 - Search for products.
 `
-      }
+      },
+      layout: 'fullscreen'
     }
   },
   argTypes: {

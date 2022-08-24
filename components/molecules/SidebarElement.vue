@@ -23,12 +23,7 @@
 </template>
 
 <script setup>
-import { onUnmounted } from 'vue'
-
 const emit = defineEmits(['close:sidebar'])
-onUnmounted(() => {
-  handleClose()
-})
 
 function handleClose() {
   emit('close:sidebar')

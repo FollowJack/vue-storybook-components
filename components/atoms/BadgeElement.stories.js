@@ -94,3 +94,23 @@ const TemplateVariations = (args) => ({
 })
 export const Variations = TemplateVariations.bind({})
 TemplateVariations.args = {}
+
+const noteArgs = {
+  variant: "danger"
+}
+
+const TemplateNote = (args) => ({
+  setup() {
+    return { args, ...actionsData }
+  },
+  template:
+    `
+    <span class="relative">
+      {{args.default}}
+      <BadgeElement v-bind="args" @click:badge="onClick"  class="absolute top-0 -right-1 " />
+    </span>
+    `,
+})
+export const Note = TemplateNote.bind({})
+Note.args = { ...noteArgs }
+

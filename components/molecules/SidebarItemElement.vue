@@ -8,7 +8,8 @@
     :class="[
       'flex items-center w-full px-2 mt-3 whitespace-nowrap rounded cursor-pointer',
       {
-        'bg-secondary-hover': isActive,
+        'bg-secondary-hover': isActive && variant.value !== 'white',
+        'bg-font-black': isActive && variant.value === 'white',
       },
     ]"
     @click:link="handleClick"

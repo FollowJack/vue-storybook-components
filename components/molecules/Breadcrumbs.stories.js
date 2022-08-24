@@ -68,3 +68,7 @@ const Template = (args) => ({
 })
 export const Default = Template.bind({})
 Default.args = { ...defaultArgs }
+
+
+export const CustomDivider = Template.bind({})
+CustomDivider.args = { ...defaultArgs, divider: '#' }

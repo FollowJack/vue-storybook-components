@@ -2,9 +2,9 @@
   <span
     :id="id"
     :class="[
-      'inline-flex justify-center rounded-full cursor-pointer',
+      'inline-flex justify-center rounded-full',
       {
-        'px-1': slots.default,
+        'px-1 cursor-pointer': slots.default,
         'h-2 w-2 block': !slots.default,
         'text-font-white': variant === 'primary' && !disabled,
         'text-font-black': variant === 'secondary' && !disabled,

@@ -1,10 +1,10 @@
 <template>
   <div
     :class="[
-      'block py-2 px-4 hover:bg-stroke-gray',
+      'block py-2 px-4',
       {
-        'cursor-pointer': !disabled,
-        'cursor-not-allowed': disabled,
+        'cursor-pointer hover:bg-stroke-gray': !disabled,
+        'cursor-not-allowed text-font-disabled': disabled,
       },
     ]"
     @click="handleClick"

@@ -74,12 +74,10 @@ const Template = (args) => ({
   },
   template:
     `
-    <div>
-      <AlertElement v-bind="args" @click:close="onClick">
-        <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
-        <template #content><TextELement as="div">{{args.content}}</TextELement></template>
-      </AlertElement>
-    </div>
+    <AlertElement v-bind="args" @click:close="onClick" class="lg:w-1/2">
+      <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
+      <template #content><TextELement as="div">{{args.content}}</TextELement></template>
+    </AlertElement>
     `,
 })
 export const Default = Template.bind({})
@@ -101,7 +99,7 @@ const TemplateVariations = (args) => ({
   },
   template:
     `
-    <div class="space-y-1">
+    <div class="space-y-1 lg:w-1/2">
       <AlertElement variant="info" @click:close="onClick">
         <template #header><TextElement as="div" weight="bold">{{args.header}}</TextElement></template>
         <template #content><TextELement as="div">{{args.content}}</TextELement></template>
