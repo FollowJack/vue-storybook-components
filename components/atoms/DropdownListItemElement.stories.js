@@ -29,7 +29,7 @@ const Template = (args) => ({
   template:
     `
     <DropdownListItemElement v-bind="args" @click:item="onClick">
-        Hover over me. See DropdownListElement for a complete example.
+        Hover over me. See DropdownElement for a complete example.
     </div>
     `,
 })
