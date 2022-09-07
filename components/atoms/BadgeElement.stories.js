@@ -51,7 +51,8 @@ const actionsData = {
 }
 
 const defaultArgs = {
-  variant: "danger"
+  variant: "danger",
+  disabled: false,
 }
 
 const Template = (args) => ({

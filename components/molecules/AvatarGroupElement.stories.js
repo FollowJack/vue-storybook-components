@@ -38,15 +38,13 @@ const Template = (args) => ({
   },
   template:
     `
-    <div class="bg-blue-100">
-    <AvatarGroupElement v-bind="args" click:avatar-group="onClick">
-      <AvatarElement :urlImage="urlImage" />
-      <AvatarElement> SE </AvatarElement>
-      <AvatarElement :urlImage="urlImage" />
-      <AvatarElement :urlImage="urlImage" />
-      <AvatarElement> XY </AvatarElement>
+      <AvatarGroupElement v-bind="args" click:avatar-group="onClick">
+        <AvatarElement :urlImage="urlImage" />
+        <AvatarElement> SE </AvatarElement>
+        <AvatarElement :urlImage="urlImage" />
+        <AvatarElement :urlImage="urlImage" />
+        <AvatarElement> XY </AvatarElement>
       </AvatarGroupElement>
-    </div>
     `,
 })
 export const Default = Template.bind({})

@@ -2,7 +2,7 @@
   <ContainerElement
     as="header"
     :class="[
-      'flex items-center justify-between px-4 xl:px-0 py-2 lg:py-5',
+      'flex items-center justify-between px-2 xl:px-0 py-2 lg:py-5',
       {
         'fixed top-0 left-0 right-0': isStatic,
       },

@@ -57,6 +57,7 @@ const defaultArgs = {
   href: "#",
   isActive: false,
   variant: 'primary',
+  disabled: false,
 }
 
 const Template = (args) => ({

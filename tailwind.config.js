@@ -26,10 +26,10 @@ module.exports = {
         'sm': '425px',
       },
       zIndex: {
-        'backdrop': '1000',
-        'modal': '1001',
-        'tooltip': '1010',
-        'tooltip-anchor': '1011',
+        'backdrop': '100',
+        'modal': '200',
+        'tooltip': '300',
+        'tooltip-anchor': '301',
       },
       colors: {
         // main

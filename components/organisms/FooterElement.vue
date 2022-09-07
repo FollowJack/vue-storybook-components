@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <ContainerElement class="flex flex-col h-full">
+    <component :is="tag" class="flex flex-col h-full">
       <div class="flex flex-1 flex-col lg:flex-row">
         <div class="lg:w-1/2 flex">
           <slot name="left" />
@@ -12,8 +12,21 @@
       <div v-if="!!$slots.bottom">
         <slot name="bottom" />
       </div>
-    </ContainerElement>
+    </component>
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  hasContainer: {
+    type: Boolean,
+    default: true,
+  },
+})
+
+const tag = computed(() => {
+  return props.hasContainer ? 'ContainerElement' : 'div'
+})
+</script>

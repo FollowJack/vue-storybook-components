@@ -4,7 +4,7 @@
     :class="[
       'inline-flex justify-center rounded-full',
       {
-        'px-1 cursor-pointer': slots.default,
+        'px-2 cursor-pointer': slots.default,
         'h-2 w-2 block': !slots.default,
         'text-font-white': variant === 'primary' && !disabled,
         'text-font-black': variant === 'secondary' && !disabled,
@@ -35,6 +35,10 @@ const props = defineProps({
     default: 'danger',
     validator: (value) =>
       ['primary', 'secondary', 'success', 'danger'].includes(value),
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
   },
 })
 const slots = useSlots()

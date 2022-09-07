@@ -177,7 +177,7 @@
           </div>
           <div class="flex items-center space-x-2">
             <TextElement variant="copy-small" color="white"
-              >© 2022 All rights reserved.
+              >© {{ new Date().getFullYear() }} All rights reserved.
             </TextElement>
           </div>
         </div>

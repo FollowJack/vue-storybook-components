@@ -1,14 +1,29 @@
 <template>
-  <div class="flex space-x-10">
+  <div
+    :class="[
+      'flex',
+      {
+        'space-x-4': size === 'small',
+        'space-x-6': size === 'medium',
+        'space-x-10': size === 'large',
+      },
+    ]"
+  >
     <LinkElement
-      variant="white"
+      :variant="color"
       :border="false"
       href="https://github.com/FollowJack"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
         ><svg
-          class="h-10 w-10"
+          :class="[
+            {
+              'h-8 w-8': size === 'small',
+              'h-10 w-10': size === 'medium',
+              'h-12 w-12': size === 'large',
+            },
+          ]"
           fill="currentColor"
           height="22"
           width="22"
@@ -26,14 +41,20 @@
           ></path></svg></i
     ></LinkElement>
     <LinkElement
-      variant="white"
+      :variant="color"
       :border="false"
       href="https://www.linkedin.com/in/devparadise/"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
         ><svg
-          class="h-10 w-10"
+          :class="[
+            {
+              'h-8 w-8': size === 'small',
+              'h-10 w-10': size === 'medium',
+              'h-12 w-12': size === 'large',
+            },
+          ]"
           fill="currentColor"
           height="22"
           width="22"
@@ -58,14 +79,20 @@
           </g></svg></i
     ></LinkElement>
     <LinkElement
-      variant="white"
+      :variant="color"
       :border="false"
       href="tel:+49 176-99-11-15-75"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
         ><svg
-          class="h-10 w-10"
+          :class="[
+            {
+              'h-8 w-8': size === 'small',
+              'h-10 w-10': size === 'medium',
+              'h-12 w-12': size === 'large',
+            },
+          ]"
           fill="currentColor"
           height="22"
           width="22"
@@ -79,14 +106,20 @@
           ></path></svg></i
     ></LinkElement>
     <LinkElement
-      variant="white"
+      :variant="color"
       :border="false"
       href="mailto:hi@devparadise.io"
       target="_blank"
       aria-label="social icon"
       ><i fill="currentColor"
         ><svg
-          class="h-10 w-10"
+          :class="[
+            {
+              'h-8 w-8': size === 'small',
+              'h-10 w-10': size === 'medium',
+              'h-12 w-12': size === 'large',
+            },
+          ]"
           fill="currentColor"
           height="22"
           width="22"
@@ -102,12 +135,25 @@
 		64,142 64,384 	"
               ></polygon>
             </polygon>
-            <polygon points="439.7,128 72,128 256,267.9 	">
-              <polygon points="439.7,128 72,128 256,267.9 	"></polygon>
+            <polygon points="439.7,128 72,128 256,267.9">
+              <polygon points="439.7,128 72,128 256,267.9"></polygon>
             </polygon>
           </g></svg></i
     ></LinkElement>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  color: {
+    type: String,
+    default: 'white',
+    validator: (value) => ['white', 'black', 'gray', 'primary'].includes(value),
+  },
+  size: {
+    type: String,
+    default: 'large',
+    validator: (value) => ['small', 'medium', 'large'].includes(value),
+  },
+})
+</script>

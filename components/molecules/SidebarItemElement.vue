@@ -6,7 +6,7 @@
     :disabled="disabled"
     size="medium"
     :class="[
-      'flex items-center w-full px-2 mt-3 whitespace-nowrap rounded cursor-pointer',
+      'flex items-center w-full px-2 whitespace-nowrap rounded cursor-pointer',
       {
         'bg-secondary-hover': isActive && variant.value !== 'white',
         'bg-font-black': isActive && variant.value === 'white',
@@ -39,7 +39,7 @@ const props = defineProps({
   },
   disabled: {
     type: Boolean,
-    default: false,
+    default: null,
   },
   variant: {
     type: String,

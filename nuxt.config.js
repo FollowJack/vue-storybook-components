@@ -76,7 +76,7 @@ export default {
       options: {
         storySort: {
           method: 'alphabetical',
-          order: ['Docs Overview', 'Atoms', 'Molecules', 'Organisms', '*'],
+          order: ['Docs Overview', 'Atoms', 'Molecules', 'Organisms', 'Pages', ['Introduction', '*'], '*'],
         },
         theme: create({
           base: 'dark',
