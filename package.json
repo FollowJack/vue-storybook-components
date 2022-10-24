@@ -38,7 +38,7 @@
     "@storybook/addon-controls": "^6.5.9",
     "@storybook/addon-docs": "^6.5.9",
     "@storybook/theming": "^6.5.10",
-    "eslint": "^8.20.0",
+    "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.7.1",
